@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!--[if IE 9 ]><html class="ie9"><![endif]-->
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+        <meta name="format-detection" content="telephone=no">
+        <meta charset="UTF-8">
+
+        <title>CWPORT::Select Station</title>
+        
+        <link href="vendors/bower_components/animate.css/animate.min.css" rel="stylesheet">
+        <link href="vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
+        <link href="vendors/bower_components/bootstrap-select/dist/css/bootstrap-select.css" rel="stylesheet">
+
+        <link href="css/app.min.css" rel="stylesheet">
+        <link href="css/cw.css" rel="stylesheet">
+    </head>
+
+    <body class="login-content">
+        <!-- Login -->
+        <div class="lc-block toggled cw-login-bg" id="l-login">
+            <div class="lcb-float"><i class="zmdi zmdi-my-location"></i></div>
+            <div><img src="img/cwport_avtomoika.png" class="img-responsive m-b-20" alt="CWPORT"></div>
+            <form id="selectStationForm" method="POST">
+               <div class="form-group">
+<!--                   <h4 class="m-b-20">Ваша станция</h4>-->
+                    <select class="selectpicker" name="station">
+                        <option value="1">Demo Moika</option>
+                        <option value="2" selected>Carwash</option>
+                        <option value="3">Nagval</option>
+                    </select>
+                </div>
+                <div class="clearfix"></div>
+
+                <div class="p-relative">
+                    <div class="checkbox cr-alt">
+                        <label class="c-gray">
+                            <input id="chkRemember" type="checkbox" value="1">
+                            <i class="input-helper"></i>
+                            Запомнить мой выбор
+                        </label>
+                    </div>
+
+                </div>
+                <button type="submit" id="btn-sign-in" class="btn btn-block btn-primary btn-float m-t-25">Select</button>
+            </form>
+        </div>
+        
+        <!-- Older IE Warning Message -->
+        <!--[if lt IE 9]>
+            <div class="ie-warning">
+                <h1 class="c-white">Warning!!</h1>
+                <p>You are using an outdated version of Internet Explorer, please upgrade <br/>to any of the following web browsers to access this application.</p>
+                <div class="iew-container">
+                    <ul class="iew-download">
+                        <li>
+                            <a href="http://www.google.com/chrome/">
+                                <img src="img/browsers/chrome.png" alt="">
+                                <div>Chrome</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.mozilla.org/en-US/firefox/new/">
+                                <img src="img/browsers/firefox.png" alt="">
+                                <div>Firefox</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.opera.com">
+                                <img src="img/browsers/opera.png" alt="">
+                                <div>Opera</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.apple.com/safari/">
+                                <img src="img/browsers/safari.png" alt="">
+                                <div>Safari</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+                                <img src="img/browsers/ie.png" alt="">
+                                <div>IE (New)</div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <p>Sorry for the inconvenience!</p>
+            </div>   
+        <![endif]-->
+
+        <!-- Javascript Libraries -->
+        <script src="vendors/bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="vendors/jquery.i18n/jquery.i18n.properties-min-1.0.9.js"></script>
+        <script src="vendors/bower_components/bootstrap-select/dist/js/bootstrap-select.js"></script>
+        
+        
+        <!-- Placeholder for IE9 -->
+        <!--[if IE 9 ]>
+            <script src="vendors/bower_components/jquery-placeholder/jquery.placeholder.min.js"></script>
+        <![endif]-->
+        
+        <script src="js/functions.js"></script>
+    </body>
+</html>

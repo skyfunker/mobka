@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<!--[if IE 9 ]><html class="ie9"><![endif]-->
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+        <meta name="format-detection" content="telephone=no">
+        <meta charset="UTF-8">
+
+        <title>CWPORT Dashboard</title>
+        
+        <link href="vendors/bower_components/animate.css/animate.min.css" rel="stylesheet">
+        <link href="vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
+        <link href="vendors/bower_components/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet">
+        <link href="vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+        
+        <link href="css/app.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/cw.css" class="style">    
+    
+    </head>
+
+    <body>
+        <header id="header" class="clearfix" data-spy="affix" data-offset-top="65">
+            <ul class="header-inner">
+                
+                <!-- Logo -->
+                <li class="logo">
+                    <a href=""><img class="img-responsive" src="img/cwport_avtomoika.png" alt="CWPORT"></a>
+                    <div id="menu-trigger"><i class="zmdi zmdi-menu"></i></div>
+                </li>
+                
+                <!-- Settings -->
+                <li class="pull-right dropdown">
+                    <a href="" data-toggle="dropdown">
+                        <i class="zmdi zmdi-more-vert"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="">Set Working Date</a></li>
+                        <li><a data-toggle="fullscreen" href="">Toggle Fullscreen</a></li>
+<!--                        <li><a data-toggle="localStorage" href="">Clear Local Storage</a></li>-->
+                        <li><a href="">Log out</a></li>
+                    </ul>
+                </li>
+                
+                <!-- Current Date -->
+                <li class="pull-right">
+                    <div class="workingdate">
+                        <div class="cYear">18 Фев</div>
+                        <div class="cDate">2016</div>
+<!--                        <div class="cMonth">Фев</div>-->
+                    </div>
+                </li>
+                <li class="pull-right">
+                    <div class="m-t-10 m-r-20">
+                        <div class="c-black text-right text-uppercase ">Автомойка</div>
+                        <address class="text-right hidden-sm hidden-xs">г.Киев, ул. Березняковская,5</address>
+                    </div>
+                </li>
+            </ul>
+        </header>
+    
+        <aside id="sidebar">
+            
+            <!--| MAIN MENU |-->
+            <ul class="side-menu">
+                <li class="sm-sub sms-profile">
+                    <a href="">
+<!--                        <img src="img/profile-pic.jpg" alt="">-->
+                        <i class="zmdi zmdi-account"></i>
+                        <span>
+                            <span class="text-uppercase">dev</span>
+                            <span>as Admin</span>
+                        </span>
+                    </a>
+                    
+                    <ul>
+                        <li><a href="">View Profile</a></li>
+                        <li><a href="">Logout</a></li>
+                    </ul>
+                </li>
+                <li class="active">
+                    <a href="dashboard.html">
+                        <i class="zmdi zmdi-home"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="invoices.html">
+                        <i class="zmdi zmdi-file-text"></i>
+                        <span>Invoices <span class="label label-success">21</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="cash.html">
+                        <i class="zmdi zmdi-money"></i>
+                        <span>Cash</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="statistics.html">
+                        <i class="zmdi zmdi-trending-up"></i>
+                        <span>Statistics</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="pricelist.html">
+                        <i class="zmdi zmdi-view-headline"></i>
+                        <span>Pricelist</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="booking.html">
+                        <i class="zmdi zmdi-calendar"></i>
+                        <span>Calendar <span class="label label-primary">12</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="settings.html">
+                        <i class="zmdi zmdi-settings"></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+                <li class="sm-sub">
+                    <a href="">
+                        <i class="zmdi zmdi-phone"></i>
+                        <span>Contact us</span>
+                    </a>
+                    <ul>
+                        <li><a href="tel:+380505555555">+380&nbsp;(50)&nbsp;555-5555</a></li>
+                        <li><a href="mailto:support@cwport.com">support@cwport.com</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </aside>
+
+        <section id="content">
+            <div class="container">
+<!--
+                <header class="page-header">
+                    <h3>Dashboard <small>Statistics for today</small></h3>
+                </header>
+-->
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="tile">
+                            <div class="t-header th-alt bg-green">
+                                <div class="th-title">Накладные</div>
+                                <div class="actions">
+                                      <a href=""><i class="zmdi zmdi-refresh-sync"></i></a>  
+                                </div>
+                            </div>
+                            <div class="t-body tb-padding">
+                               <div class="row">
+                                   <div class="col-sm-4">
+                                      <div class="text-center">
+                                           <h4>Приход</h4>
+                                           <h3 class="c-green">150,000.00</h3>
+                                      </div>
+                                   </div>
+                                   <div class="col-sm-4">
+                                      <div class="text-center">
+                                           <h4>Расход</h4>
+                                           <h3 class="c-green">&mdash;5,000.00</h3>
+                                      </div>
+                                   </div>
+                                   <div class="col-sm-4">
+                                      <div class="text-center">
+                                           <h4>Итого</h4>
+                                           <h3 class="c-green">145,000.00</h3>
+                                      </div>
+                                   </div>
+                               </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="tile">
+                            <div class="t-header th-alt bg-blue">
+                                <div class="th-title">Касса</div>
+                                <div class="actions">
+                                      <a href=""><i class="zmdi zmdi-refresh-sync"></i></a>  
+                                </div>
+                            </div>
+                            <div class="t-body tb-padding">
+                               <div class="row">
+                                   <div class="col-sm-4">
+                                      <div class="text-center">
+                                           <h4>Приход</h4>
+                                           <h3 class="c-blue">50,000.00</h3>
+                                      </div>
+                                   </div>
+                                   <div class="col-sm-4">
+                                      <div class="text-center">
+                                           <h4>Расход</h4>
+                                           <h3 class="c-blue">&mdash;5,000.00</h3>
+                                      </div>
+                                   </div>
+                                   <div class="col-sm-4">
+                                      <div class="text-center">
+                                           <h4>Остаток</h4>
+                                           <h3 class="c-blue">45,000.00</h3>
+                                      </div>
+                                   </div>
+                               </div>
+                            </div>
+                            <span class="hidden">
+                                В этом расчете учитываются все кассовые операции, не зависимо от метки "Учет" в таблице настроек кассовых операций
+                                Расчет проводится за дату начала указанного периода
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+                
+                <div class="row">
+                    <div class="col-sm-6">
+                        <!-- Last invoices -->
+                        <div class="tile">
+                            <div class="t-header th-alt bg-green">
+                                <div class="th-title">Last Invoices</div>
+                                <div class="actions">
+                                    <a href=""><i class="zmdi zmdi-refresh-sync"></i></a>  
+                                </div>
+                            </div>
+                            
+                            <div class="tile-body">
+                                <table class="table-bordered">
+                                    <tbody>
+                                        <tr>
+                                            <td><i class="zmdi zmdi-check-circle"></i></td>
+                                            <td>17/02/2016 14:20</td>
+                                            <td>
+                                                <div>AA5467IH <span>Toyota</span></div>
+                                                <div><span>Сумма: 120.00</span><span>Скидка: 10%</span><span>Итого: 100.00</span></div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="todo-footer">
+                                    <button class="btn btn-success btn-icon"><i class="zmdi zmdi-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="col-sm-6">
+                        
+                        <!-- Last cash records -->
+                        <div class="tile">
+                            <div class="t-header th-alt bg-blue">
+                                <div class="th-title">Last Cash records</div>
+                                <div class="actions">
+                                      <a href=""><i class="zmdi zmdi-refresh-sync"></i></a>  
+                                </div>
+                            </div>
+                            
+                            <div class="tile-body todo-lists">
+                                <div class="list-group lg-alt">
+                                    <div class="list-group-item">                                            
+                                        <div class="checkbox cr-alt">
+                                            <label class="tl-item">
+                                                <input type="checkbox" value="" checked>
+                                                <i class="input-helper"></i>
+                                                <span>Aenean id justo ac tellus ullamcorper pulvinar diam enim feugiat neque, eget ultricies magna quam vel felis.</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="list-group-item">                                           
+                                        <div class="checkbox cr-alt">
+                                            <label class="tl-item">
+                                                <input type="checkbox" value="" checked>
+                                                <i class="input-helper"></i>
+                                                <span>Interdum et malesuada fames ac ante ipsum primis in faucibus Interdum.</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="list-group-item">
+                                        <div class="checkbox cr-alt">
+                                            <label class="tl-item">
+                                                <input type="checkbox" value="" checked>
+                                                <i class="input-helper"></i>
+                                                <span>Integer eget eleifend nisl. Suspendisse potenti. Nulla efficitur, eros eleifend tempor placerat, urna sem malesuada lacus. Mauris mi dui, accumsan ut sapien eget.</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                
+                                <div class="todo-footer">
+                                    <button class="btn bg-blue btn-icon"><i class="zmdi zmdi-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+                
+                <!-- Calendar -->
+                <div class="row">
+                        <!-- Calendar -->
+                        <div class="tile">
+                            <div class="calendar-widget"></div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        
+        <footer id="footer">
+            Copyright © 2016 CWPORT.COM
+            
+            <ul class="f-menu">
+                <li><a href="dashboard.html">Home</a></li>
+                <li><a href="">Support</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </footer>
+        
+        <!-- Older IE Warning Message -->
+        <!--[if lt IE 9]>
+            <div class="ie-warning">
+                <h1 class="c-white">Warning!!</h1>
+                <p>You are using an outdated version of Internet Explorer, please upgrade <br/>to any of the following web browsers to access this website.</p>
+                <div class="iew-container">
+                    <ul class="iew-download">
+                        <li>
+                            <a href="http://www.google.com/chrome/">
+                                <img src="img/browsers/chrome.png" alt="">
+                                <div>Chrome</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.mozilla.org/en-US/firefox/new/">
+                                <img src="img/browsers/firefox.png" alt="">
+                                <div>Firefox</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.opera.com">
+                                <img src="img/browsers/opera.png" alt="">
+                                <div>Opera</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.apple.com/safari/">
+                                <img src="img/browsers/safari.png" alt="">
+                                <div>Safari</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+                                <img src="img/browsers/ie.png" alt="">
+                                <div>IE (New)</div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <p>Sorry for the inconvenience!</p>
+            </div>   
+        <![endif]-->
+        
+        <!-- Javascript Libraries -->
+        <script src="vendors/bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        
+        <!-- Calendar on dashboard required scripts -->
+        <script src="vendors/bower_components/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
+        <script src="vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
+        <script src="vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="vendors/bower_components/moment/min/moment.min.js"></script>
+        <script src="vendors/bower_components/fullcalendar/dist/fullcalendar.min.js "></script>
+        <!-- End of Calendar scripts -->
+        
+        <!-- Placeholder for IE9 -->
+        <!--[if IE 9 ]>
+            <script src="vendors/bower_components/jquery-placeholder/jquery.placeholder.min.js"></script>
+        <![endif]-->
+        
+        <script src="js/functions.js"></script>
+        <script src="js/dashboard.js"></script>
+    </body>
+</html>

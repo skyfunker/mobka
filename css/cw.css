@@ -1,0 +1,56 @@
+div.cw-login-bg {
+    background-image: url('../img/login-bg.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.logo { background-color: white; }
+
+.logo-mobile {
+    width: 240px;
+    height: 62px;
+    background-color: #ffffff;
+    margin-right: 15px;
+    padding: 15px 22px;
+}
+
+div.workingdate {
+	position: relative;
+	top: 5px;
+	right: 10px;
+	float: right;
+	height: 100%;
+	width: 100px;
+	text-align:center;
+	border-left: 1px solid #777777;
+	padding-left: 10px;
+}
+
+div.workingdate div.cYear,
+div.workingdate div.cDate,
+div.workingdate div.cMonth {
+	font-size: 14px;
+	color: #ffffff;
+	background-color: #FF9800;
+/*	text-transform: uppercase;*/
+	padding-bottom: 3px;
+}
+
+div.workingdate div.cYear {
+	font-weight: bold;
+	background-color: #C1272D;
+	padding: 2px 0 3px 0;
+	margin-top: 3px;
+}
+
+div.workingdate div.cDate {
+	font-size: 14px;
+	font-weight: bold;
+	padding-bottom: 0;
+	padding-top: 2px;
+}
+
+.th-title {
+    font-size: 16px;
+}
+
