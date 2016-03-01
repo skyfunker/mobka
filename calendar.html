@@ -6,15 +6,15 @@
         <meta charset="UTF-8">
 
         <title>CWPORT Календарь</title>
-        
         <link href="vendors/bower_components/animate.css/animate.min.css" rel="stylesheet">
         <link href="vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
         <link href="vendors/bower_components/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet">
+        <link href="vendors/bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
         <link href="vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
-        
+
         <link href="css/app.min.css" rel="stylesheet">
         <link rel="stylesheet" href="css/cw.css" class="style">    
-    
+
     </head>
 
     <body>
@@ -136,13 +136,96 @@
         <section id="content">
             <div class="container">
                 <header class="page-header">
-                    <h3>Календарь</h3>
+                    <h3>Календарь станции<small>Иcпользуйте календарь для предварительной записи клиентов на мойку, 
+                            а также для других календарніх событий и напоминаний</small></h3>
                 </header>
+                <div id="calendar"></div>
 
-           
+                <!-- Add event -->
+                <div class="modal fade" id="addNew-event" data-backdrop="static" data-keyboard="false">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">Add an Event</h4>
+                            </div>
+                            <div class="modal-body">
+                                <form class="addEvent" role="form">
+                                    <div class="form-group">
+                                        <label for="eventName">Event Name</label>
+                                        <div class="fg-line">
+                                            <input type="text" class="input-sm form-control" id="eventName" placeholder="eg: Sports day">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="eventName">Tag Color</label>
+                                        <div class="event-tag">
+                                            <span data-tag="bg-teal" class="bg-teal selected"></span>
+                                            <span data-tag="bg-red" class="bg-red"></span>
+                                            <span data-tag="bg-pink" class="bg-pink"></span>
+                                            <span data-tag="bg-blue" class="bg-blue"></span>
+                                            <span data-tag="bg-lime" class="bg-lime"></span>
+                                            <span data-tag="bg-green" class="bg-green"></span>
+                                            <span data-tag="bg-cyan" class="bg-cyan"></span>
+                                            <span data-tag="bg-orange" class="bg-orange"></span>
+                                            <span data-tag="bg-purple" class="bg-purple"></span>
+                                            <span data-tag="bg-gray" class="bg-gray"></span>
+                                            <span data-tag="bg-black" class="bg-black"></span>
+                                        </div>
+                                    </div>
+
+                                    <input type="hidden" id="getStart" />
+                                    <input type="hidden" id="getEnd" /> 
+
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <p class="c-black  m-b-20">Basic Example</p>
+
+                                            <div class="input-group form-group">
+                                                <span class="input-group-addon"><i class="zmdi zmdi-calendar"></i></span>
+                                                <div class="dtp-container">
+                                                    <input type='text' class="form-control date-time-picker" placeholder="Click here...">
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-sm-4">
+                                            <p class="c-black  m-b-20">Date Picker</p>
+
+                                            <div class="input-group form-group">
+                                                <span class="input-group-addon"><i class="zmdi zmdi-calendar"></i></span>
+                                                <div class="dtp-container">
+                                                    <input type='text' class="form-control date-picker" placeholder="Click here...">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-4">
+                                            <p class="c-black  m-b-20">Time Picker</p>
+
+                                            <div class="input-group form-group">
+                                                <span class="input-group-addon"><i class="zmdi zmdi-time"></i></span>
+                                                <div class="dtp-container">
+                                                    <input type='text' class="form-control time-picker" placeholder="Click here...">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-primary btn-sm" id="addEvent">Add Event</button>
+                                <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
-        
+
         <footer id="footer">
             Copyright © 2016 CWPORT.COM
         </footer>
@@ -193,20 +276,22 @@
         <!-- Javascript Libraries -->
         <script src="vendors/bower_components/jquery/dist/jquery.min.js"></script>
         <script src="vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-        
+
         <!-- Calendar on dashboard required scripts -->
         <script src="vendors/bower_components/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
         <script src="vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
         <script src="vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
         <script src="vendors/bower_components/moment/min/moment.min.js"></script>
         <script src="vendors/bower_components/fullcalendar/dist/fullcalendar.min.js "></script>
+        <script src="vendors/bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+
         <!-- End of Calendar scripts -->
-        
+
         <!-- Placeholder for IE9 -->
         <!--[if IE 9 ]>
             <script src="vendors/bower_components/jquery-placeholder/jquery.placeholder.min.js"></script>
         <![endif]-->
-        
+
         <script src="js/functions.js"></script>
         <script src="js/calendar.js"></script>
     </body>

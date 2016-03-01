@@ -8,7 +8,7 @@ $(document).ready(function () {
     var d = date.getDate();
     var m = date.getMonth();
     var y = date.getFullYear();
-    var cId = $('#calendar'); //Change the name if you want. I'm also using thsi add button for more actions
+    var cId = $('#calendar'); 
 
     //Generate the Calendar
     cId.fullCalendar({
