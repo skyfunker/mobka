@@ -144,7 +144,7 @@
                     <div class="col-md-6">
                         <div class="tile">
                             <div class="t-header th-alt bg-green">
-                                <div class="th-title">Накладные</div>
+                                <div class="th-title">Статистика по накладным</div>
                                 <div class="actions">
                                       <a href=""><i class="zmdi zmdi-refresh-sync"></i></a>  
                                 </div>
@@ -176,7 +176,7 @@
                     <div class="col-md-6">
                         <div class="tile">
                             <div class="t-header th-alt bg-blue">
-                                <div class="th-title">Касса</div>
+                                <div class="th-title">Статистика по кассе</div>
                                 <div class="actions">
                                       <a href=""><i class="zmdi zmdi-refresh-sync"></i></a>  
                                 </div>
@@ -215,94 +215,126 @@
                 <div class="row">
                     <div class="col-sm-6">
                         <!-- Last invoices -->
-                        <div class="tile">
+                        <div class="tile p-r-5">
                             <div class="t-header th-alt bg-green">
-                                <div class="th-title">Last Invoices</div>
+                                <div class="th-title">Накладные (3 из 27)</div>
                                 <div class="actions">
                                     <a href=""><i class="zmdi zmdi-refresh-sync"></i></a>  
                                 </div>
                             </div>
                             
-                            <div class="tile-body">
-                                <table class="table-bordered">
-                                    <tbody>
-                                        <tr>
-                                            <td><i class="zmdi zmdi-check-circle"></i></td>
-                                            <td>17/02/2016 14:20</td>
-                                            <td>
-                                                <div>AA5467IH <span>Toyota</span></div>
-                                                <div><span>Сумма: 120.00</span><span>Скидка: 10%</span><span>Итого: 100.00</span></div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <div class="todo-footer">
-                                    <button class="btn btn-success btn-icon"><i class="zmdi zmdi-plus"></i></button>
-                                </div>
+                            <div class="tile-body p-b-10">
+                                <div class="row m-t-10 m-l-5">
+                                    <div class="col-sm-2 col-xs-2">
+                                        <button class="btn bg-lightgreen btn-icon"><i class="zmdi zmdi-plus"></i></button>
+                                    </div>
+                                    <div class="col-sm-5 col-xs-5">
+                                        <div>18/02/2016 14:20</div>
+                                        <div>AA5467IH <span>Toyota</span></div>
+                                    </div>
+                                    <div class="col-sm-5 col-xs-5">
+                                        <div class="c-black f-500">
+                                            Сумма: 120.00 <small>(-10%)</small>
+                                        </div>
+                                        <div class="c-black f-500">Итого: 100.00</div>
+                                    </div>
+                                </div>    
+                                <div class="row m-t-10 m-l-5">
+                                    <div class="col-sm-2 col-xs-2">
+                                        <button class="btn bg-gray btn-icon"><i class="zmdi zmdi-edit"></i></button>
+                                    </div>
+                                    <div class="col-sm-5 col-xs-5">
+                                        <div>18/02/2016 15:10</div>
+                                        <div>HV0001D <span>BMW</span></div>
+                                    </div>
+                                    <div class="col-sm-5 col-xs-5">
+                                        <div class="c-black f-500">
+                                            Сумма: 65.00 <small></small>
+                                        </div>
+                                        <div class="c-black f-500">Итого: <span>65.00</span></div>
+                                    </div>
+                                </div>    
+                                <div class="row m-t-10 m-l-5">
+                                    <div class="col-sm-2 col-xs-2">
+                                        <button class="btn bg-orange btn-icon"><i class="zmdi zmdi-minus"></i></button>
+                                    </div>
+                                    <div class="col-sm-5 col-xs-5 tex">
+                                        <div>17/02/2016 14:20</div>
+                                    </div>
+                                    <div class="col-sm-5 col-xs-5">
+                                        <div class="c-black f-500">Сумма: -2000.00</span></div>
+                                        <div>Потребление электроэнергии за месяц</div>
+                                    </div>
+                                </div>    
                             </div>
                         </div>
                         
                     </div>
+                    
                     <div class="col-sm-6">
                         
                         <!-- Last cash records -->
-                        <div class="tile">
+                        <div class="tile p-r-5">
                             <div class="t-header th-alt bg-blue">
-                                <div class="th-title">Last Cash records</div>
+                                <div class="th-title">Движения по кассе (3 из 45) </div>
                                 <div class="actions">
                                       <a href=""><i class="zmdi zmdi-refresh-sync"></i></a>  
                                 </div>
                             </div>
                             
-                            <div class="tile-body todo-lists">
-                                <div class="list-group lg-alt">
-                                    <div class="list-group-item">                                            
-                                        <div class="checkbox cr-alt">
-                                            <label class="tl-item">
-                                                <input type="checkbox" value="" checked>
-                                                <i class="input-helper"></i>
-                                                <span>Aenean id justo ac tellus ullamcorper pulvinar diam enim feugiat neque, eget ultricies magna quam vel felis.</span>
-                                            </label>
-                                        </div>
+                            <div class="tile-body p-b-10">
+                                <div class="row m-t-10 m-l-5">
+                                    <div class="col-sm-2 col-xs-2">
+                                        <button class="btn bg-blue btn-icon"><i class="zmdi zmdi-car-wash"></i></button>
                                     </div>
-                                
-                                    <div class="list-group-item">                                           
-                                        <div class="checkbox cr-alt">
-                                            <label class="tl-item">
-                                                <input type="checkbox" value="" checked>
-                                                <i class="input-helper"></i>
-                                                <span>Interdum et malesuada fames ac ante ipsum primis in faucibus Interdum.</span>
-                                            </label>
-                                        </div>
+                                    <div class="col-sm-5 col-xs-5">
+                                        <div>17/02/2016 14:20</div>
                                     </div>
-                                    
-                                    <div class="list-group-item">
-                                        <div class="checkbox cr-alt">
-                                            <label class="tl-item">
-                                                <input type="checkbox" value="" checked>
-                                                <i class="input-helper"></i>
-                                                <span>Integer eget eleifend nisl. Suspendisse potenti. Nulla efficitur, eros eleifend tempor placerat, urna sem malesuada lacus. Mauris mi dui, accumsan ut sapien eget.</span>
-                                            </label>
+                                    <div class="col-sm-5 col-xs-5">
+                                        <div class="c-black f-500">
+                                            Сумма: 100.00
                                         </div>
+                                        <div>Оплата услуг по накладной №160301-1420</div>
                                     </div>
-                                    
-                                </div>
-                                
-                                <div class="todo-footer">
-                                    <button class="btn bg-blue btn-icon"><i class="zmdi zmdi-plus"></i></button>
-                                </div>
+                                </div>    
+                                <div class="row m-t-10 m-l-5">
+                                    <div class="col-sm-2 col-xs-2">
+                                        <button class="btn bg-blue btn-icon"><i class="zmdi zmdi-coffee"></i></button>
+                                    </div>
+                                    <div class="col-sm-5 col-xs-5">
+                                        <div>17/02/2016 14:20</div>
+                                    </div>
+                                    <div class="col-sm-5 col-xs-5">
+                                        <div class="c-black f-500">
+                                            Сумма: 50.00 <small></small>
+                                        </div>
+                                        <div>Два американо</div>
+                                    </div>
+                                </div>    
+                                <div class="row m-t-10 m-l-5">
+                                    <div class="col-sm-2 col-xs-2">
+                                        <button class="btn bg-orange btn-icon"><i class="zmdi zmdi-minus"></i></button>
+                                    </div>
+                                    <div class="col-sm-5 col-xs-5 tex">
+                                        <div>17/02/2016 14:20</div>
+                                    </div>
+                                    <div class="col-sm-5 col-xs-5">
+                                        <div class="c-black f-500">Сумма: -1200.00</span></div>
+                                        <div>Закупка моющих средств</div>
+                                    </div>
+                                </div>    
                             </div>
                         </div>                        
                     </div>
                 </div>
                 
                 <!-- Calendar -->
-                <div class="row">
-                        <!-- Calendar -->
+<!--                <div class="row">
+                         Calendar 
                         <div class="tile">
                             <div class="calendar-widget"></div>
                         </div>
-                </div>
+                </div>-->
             </div>
         </section>
         
