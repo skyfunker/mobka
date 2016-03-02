@@ -3,6 +3,27 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
+function CWBooking(cwevent, params) {
+    this.event = cwevent;
+    this.params = params;
+};
+
+function CWEvent(id, name, momentStart, momentEnd, tag) {
+    this.id = id;
+    this.name = name;
+    this.start = momentStart;
+    this.end = momentEnd;
+    this.tag = tag;
+};
+
+var cProcessor = {
+    events: [],
+    initEventDialog: function(elDialog, cwBooking, cwEvent) {
+        
+    }
+};
+
 $(document).ready(function () {
     var date = new Date();
     var d = date.getDate();
@@ -12,15 +33,16 @@ $(document).ready(function () {
 
     //Generate the Calendar
     cId.fullCalendar({
+        height: 'auto', // removes scrollbar in agenda views
         header: {
             right: '',
             center: 'prev, title, next',
             left: ''
         },
         theme: true, //Do not remove this as it ruin the design
-        selectable: true,
+        selectable: true, // allows and processes click on calendar
         selectHelper: true,
-        editable: true,
+        editable: false, // prevents dragging events
         //Add Events
         events: [
             {
@@ -54,16 +76,17 @@ $(document).ready(function () {
         ],
         //On Day Select
         select: function (start, end, allDay) {
-            $('#addNew-event').modal('show');
-            $('#addNew-event input:text').val('');
-            $('#getStart').val(start);
-            $('#getEnd').val(end);
+            $('#eventStartTime').val(start);
+            $('#eventEndTime').val(end);
+            $('#eventId').val('');
+            $('#dialogEvent').modal('show');
         },
         eventClick: function (calEvent, jsEvent, view) {
-
-            alert('Event: ' + calEvent.id + ' ' + calEvent.title);
-//            alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
-//            alert('View: ' + view.name);
+            $('#eventName').val(calEvent.title);
+            $('#eventStartTime').val(calEvent.start);
+            $('#eventEndTime').val(calEvent.end);
+            $('#eventId').val(calEvent.id);
+            $('#dialogEvent').modal('show');
         }
     });
     //Create and ddd Action button with dropdown in Calendar header. 
@@ -92,16 +115,16 @@ $(document).ready(function () {
         });
     })();
     //Add new Event
-    $('body').on('click', '#addEvent', function () {
+    $('body').on('click', '#saveEvent', function () {
         var eventName = $('#eventName').val();
         var tagColor = $('.event-tag > span.selected').attr('data-tag');
         if (eventName !== '') {
             //Render Event
             $('#calendar').fullCalendar('renderEvent', {
                 title: eventName,
-                start: $('#getStart').val(),
-                end: $('#getEnd').val(),
-                allDay: true,
+                start: $('#eventStartTime').val(),
+                end: $('#eventEndTime').val(),
+                allDay: false,
                 className: tagColor
 
             }, true); //Stick the event
