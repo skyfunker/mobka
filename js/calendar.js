@@ -3,6 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+var cProcessor = {counter: 0};
+var timer;
+var cId = new Object();
+function addMinutes(date, minutes) {
+    return new Date(date.getTime() + minutes*60000);
+}
 
 function CWBooking(cwevent, params) {
     this.event = cwevent;
@@ -17,10 +23,34 @@ function CWEvent(id, name, momentStart, momentEnd, tag) {
     this.tag = tag;
 };
 
-var cProcessor = {
-    events: [],
-    initEventDialog: function(elDialog, cwBooking, cwEvent) {
-        
+function alarm() {
+    var player = document.getElementById('alarmPlayer');
+    player.play();
+};
+
+function minutesUntil(deltamin, upcomingDate) {
+    var delta = Math.round((upcomingDate.getTime() - (new Date()).getTime())/60000);
+    if(delta > 0) {
+        console.log(Math.round((upcomingDate.getTime() - (new Date()).getTime())/60000));
+    }
+    return (deltamin == delta);
+}
+
+function processEvents() {
+    var clientEvents = cId.fullCalendar('clientEvents');
+    var events = new Array();
+    var curTime = new Date();
+    if($.isArray(clientEvents)) {
+        $.each(clientEvents, function (i, obj){
+            // if 15 minutes till next event
+            if(minutesUntil(15, new Date(obj.start))) {
+                events.push({id: obj.id, title: obj.title, start: obj.start, end: obj.end});
+            }
+        });
+    } 
+    for(var i = 0; i < events.length; i++) {
+        // alarm();
+        swal('Запись на мойку', events[i].title, "warning");
     }
 };
 
@@ -29,7 +59,7 @@ $(document).ready(function () {
     var d = date.getDate();
     var m = date.getMonth();
     var y = date.getFullYear();
-    var cId = $('#calendar'); 
+    cId = $('#calendar'); 
 
     //Generate the Calendar
     cId.fullCalendar({
@@ -45,6 +75,20 @@ $(document).ready(function () {
         editable: false, // prevents dragging events
         //Add Events
         events: [
+            {
+                id: (new String('CAR TEST1')).replace(/\s/g, '_'),
+                title: 'CAR TEST1',
+                start: addMinutes(new Date(), 16),
+                end: addMinutes(new Date(), 46),
+                className: 'bg-yellow'
+            },
+            {
+                id: (new String('CAR TEST2')).replace(/\s/g, '_'),
+                title: 'CAR TEST2',
+                start: addMinutes(new Date(), 21),
+                end: addMinutes(new Date(), 81),
+                className: 'bg-orange'
+            },
             {
                 id: (new String('BMW KZ0298')).replace(/\s/g, '_'),
                 title: 'BMW KZ0298',
@@ -65,13 +109,6 @@ $(document).ready(function () {
                 start: new Date(y, m, d, 10, 30, 00, 00),
                 end: new Date(y, m, d, 10, 45, 00, 00),
                 className: 'bg-black'
-            },
-            {
-                id: (new String('Jeep RND876')).replace(/\s/g, '_'),
-                title: 'Jeep RND876',
-                start: new Date(y, m, d, 12, 15, 00, 00),
-                end: new Date(y, m, d, 12, 45, 00, 00),
-                className: 'bg-orange'
             }
         ],
         //On Day Select
@@ -146,6 +183,10 @@ $(document).ready(function () {
         cId.fullCalendar('changeView', dataView);
     });
     cId.fullCalendar('changeView', 'agendaDay');
+    
+    (function() {
+        timer = setInterval(processEvents, 10000); // every 1 min run event processing
+    })();
 });
 
 

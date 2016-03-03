@@ -277,7 +277,7 @@ $(document).ready(function(){
         Media Elements
      -----------------------------------------------------------*/
     if($('audio, video')[0]) {
-        $('video,audio').mediaelementplayer();
+        // $('video,audio').mediaelementplayer();
     }
     
     

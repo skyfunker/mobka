@@ -13,6 +13,7 @@
         <link href="vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
         <link href="vendors/bower_components/bootstrap-select/dist/css/bootstrap-select.css" rel="stylesheet">
         
+        <link href="vendors/bower_components/bootstrap-sweetalert/lib/sweet-alert.css" rel="stylesheet">
 
         <link href="css/app.min.css" rel="stylesheet">
         <link rel="stylesheet" href="css/cw.css" class="style">    
@@ -294,10 +295,13 @@
                         </div>
                     </div> <!-- Booking | Event modal dialog end -->
                 </div>
-
+                <audio id="alarmPlayer">
+                    <source src="img/alarm.mp3" type="audio/mpeg">
+                    Ваш браузер не поддерживает HTML5 Audio. Уведомление о календарном событии будет без звукового сигнала. 
+                </audio>
             </div>
         </section>
-
+        
         <footer id="footer">
             Copyright © 2016 CWPORT.COM
         </footer>
@@ -358,6 +362,8 @@
 
         <!-- End of Calendar scripts -->
         <script src="vendors/bower_components/bootstrap-select/dist/js/bootstrap-select.js"></script>
+        <!-- Notification dialogs -->
+        <script src="vendors/bower_components/bootstrap-sweetalert/lib/sweet-alert.min.js"></script>
 
         <!-- Placeholder for IE9 -->
         <!--[if IE 9 ]>
