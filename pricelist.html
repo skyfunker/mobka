@@ -133,12 +133,74 @@
 
         <section id="content">
             <div class="container">
-                <header class="page-header">
+<!--                <header class="page-header">
                     <h3>Услуги и цены</h3>
-                </header>
-<!-- Data table with record list  -->
-           
+                </header>-->
+                <div class="tile">
+                    <div class="t-header">
+                        <div class="th-title">Услуги и цены <small>Данные прайс-листа используются при оформлении накладных</small></div>
+                    </div>
+
+                    <table id="data-table-command" class="table table-bordered table-vmiddle">
+                        <thead>
+                            <tr>
+<!--                                <th data-column-id="id" data-type="numeric">ID</th>-->
+                                <th data-column-id="inservice">Вкл.</th>
+                                <th data-column-id="inaction">Акц.</th>
+                                <th data-column-id="servicename" data-order="asc">Услуга</th>
+                                <th data-column-id="pricea">Класс А</th>
+                                <th data-column-id="priceb">Класс B</th>
+                                <th data-column-id="pricec">Класс C</th>
+                                <th data-column-id="priced">Класс D</th>
+                                <th data-column-id="commands" data-formatter="commands" data-sortable="false">Commands</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>                        
+                                    <div class="checkbox cr-alt m-b-20">
+                                        <label>
+                                            <input type="checkbox" value="" checked>
+                                            <i class="input-helper"></i>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>                        
+                                    <div class="checkbox cr-alt m-b-20">
+                                        <label>
+                                            <input type="checkbox" value="1">
+                                            <i class="input-helper"></i>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>БЕСКОНТАКТНАЯ МОЙКА <small>Kaercher аппарат</small></td>
+                                <td>85.00</td><td>100.00</td><td>115.00</td><td>130.00</td>
+                            </tr>
+                            <tr>
+                                <td>                        
+                                    <div class="checkbox cr-alt m-b-20">
+                                        <label>
+                                            <input type="checkbox" value="" checked>
+                                            <i class="input-helper"></i>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>                        
+                                    <div class="checkbox cr-alt m-b-20">
+                                        <label>
+                                            <input type="checkbox" value="1">
+                                            <i class="input-helper"></i>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>Влажная уборка <small>Спецтряпками</small></td>
+                                <td>85.00</td><td>100.00</td><td>115.00</td><td>130.00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
+
         </section>
         
         <footer id="footer">
@@ -191,6 +253,10 @@
         <!-- Javascript Libraries -->
         <script src="vendors/bower_components/jquery/dist/jquery.min.js"></script>
         <script src="vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
+        <script src="vendors/bower_components/jquery.bootgrid/dist/jquery.bootgrid-override.min.js"></script>
+
         
         <!-- Placeholder for IE9 -->
         <!--[if IE 9 ]>
