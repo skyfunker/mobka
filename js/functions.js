@@ -123,7 +123,10 @@ $(document).ready(function(){
     -----------------------------------------------------------*/
     //Date Time Picker
     if ($('.date-time-picker')[0]) {
-	   $('.date-time-picker').datetimepicker();
+	   $('.date-time-picker').datetimepicker({
+                locale: 'ru',
+                format: 'DD/MM/YYYY hh:mm'
+            });
     }
     
     //Time
@@ -277,7 +280,7 @@ $(document).ready(function(){
         Media Elements
      -----------------------------------------------------------*/
     if($('audio, video')[0]) {
-        $('video,audio').mediaelementplayer();
+        // $('video,audio').mediaelementplayer();
     }
     
     

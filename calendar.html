@@ -11,6 +11,9 @@
         <link href="vendors/bower_components/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet">
         <link href="vendors/bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
         <link href="vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+        <link href="vendors/bower_components/bootstrap-select/dist/css/bootstrap-select.css" rel="stylesheet">
+        
+        <link href="vendors/bower_components/bootstrap-sweetalert/lib/sweet-alert.css" rel="stylesheet">
 
         <link href="css/app.min.css" rel="stylesheet">
         <link rel="stylesheet" href="css/cw.css" class="style">    
@@ -136,96 +139,185 @@
         <section id="content">
             <div class="container">
                 <header class="page-header">
-                    <h3>Календарь станции<small>Иcпользуйте календарь для предварительной записи клиентов на мойку, 
-                            а также для других календарніх событий и напоминаний</small></h3>
+                    <h3>Календарь <small>Иcпользуйте календарь для предварительной записи клиентов, 
+                            а также для других календарных событий и напоминаний</small></h3>
                 </header>
-                <div id="calendar"></div>
 
-                <!-- Add event -->
-                <div class="modal fade" id="addNew-event" data-backdrop="static" data-keyboard="false">
+                <div id="calendar"></div> <!-- Calendar container -->
+
+                <!-- Booking | Event dialog start -->
+                <div class="modal fade" id="dialogEvent" data-backdrop="static" data-keyboard="false">
                     <div class="modal-dialog">
                         <div class="modal-content">
-                            <div class="modal-header">
-                                <h4 class="modal-title">Add an Event</h4>
-                            </div>
                             <div class="modal-body">
-                                <form class="addEvent" role="form">
-                                    <div class="form-group">
-                                        <label for="eventName">Event Name</label>
-                                        <div class="fg-line">
-                                            <input type="text" class="input-sm form-control" id="eventName" placeholder="eg: Sports day">
-                                        </div>
-                                    </div>
+                                
+                                <div role="tabpanel" class="tab">
+                                    <ul class="tab-nav" role="tablist">
+                                        <li class="active"><a href="#tabBooking" aria-controls="tabBooking" role="tab" data-toggle="tab">Запись на сервис</a></li>
+<!--                                        <li role="presentation"><a href="#tabEvent" aria-controls="tabEvent" role="tab" data-toggle="tab">Событие</a></li>-->
+                                    </ul>
+                                  
+                                    <div class="tab-content p-b-5">
 
-                                    <div class="form-group">
-                                        <label for="eventName">Tag Color</label>
-                                        <div class="event-tag">
-                                            <span data-tag="bg-teal" class="bg-teal selected"></span>
-                                            <span data-tag="bg-red" class="bg-red"></span>
-                                            <span data-tag="bg-pink" class="bg-pink"></span>
-                                            <span data-tag="bg-blue" class="bg-blue"></span>
-                                            <span data-tag="bg-lime" class="bg-lime"></span>
-                                            <span data-tag="bg-green" class="bg-green"></span>
-                                            <span data-tag="bg-cyan" class="bg-cyan"></span>
-                                            <span data-tag="bg-orange" class="bg-orange"></span>
-                                            <span data-tag="bg-purple" class="bg-purple"></span>
-                                            <span data-tag="bg-gray" class="bg-gray"></span>
-                                            <span data-tag="bg-black" class="bg-black"></span>
-                                        </div>
-                                    </div>
-
-                                    <input type="hidden" id="getStart" />
-                                    <input type="hidden" id="getEnd" /> 
-
-                                    <div class="row">
-                                        <div class="col-sm-4">
-                                            <p class="c-black  m-b-20">Basic Example</p>
-
-                                            <div class="input-group form-group">
-                                                <span class="input-group-addon"><i class="zmdi zmdi-calendar"></i></span>
-                                                <div class="dtp-container">
-                                                    <input type='text' class="form-control date-time-picker" placeholder="Click here...">
+<!-- Booking for service -->
+                                        <div role="tabpanel" class="tab-pane active animated fadeIn in" id="tabBooking">
+                                            <form id="formBooking" class="addEvent" role="form">
+                                                <input type="hidden" id="eventId" /> 
+                                                <div class="form-group">
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                            <label for="clientName">Клиент</label>
+                                                            <div class="fg-line">
+                                                                <input type="text" class="input-sm form-control" id="clientName" placeholder="Имя...">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <label for="phone">Телефон</label>
+                                                            <div class="fg-line">
+                                                                <input type="text" class="input-sm form-control" id="clientPhone" placeholder="(555)555-55-55">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row m-t-5">
+                                                        <div class="col-sm-6">
+                                                            <label for="carmodel">Марка</label>
+                                                            <div class="fg-line">
+                                                                <input type="text" class="input-sm form-control" id="carModel" placeholder="марка авто">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <label for="carnum">Номер Авто</label>
+                                                            <div class="fg-line">
+                                                                <input type="text" class="input-sm form-control" id="carNumber" placeholder="XX1234XX">
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </div>
 
-
-                                        <div class="col-sm-4">
-                                            <p class="c-black  m-b-20">Date Picker</p>
-
-                                            <div class="input-group form-group">
-                                                <span class="input-group-addon"><i class="zmdi zmdi-calendar"></i></span>
-                                                <div class="dtp-container">
-                                                    <input type='text' class="form-control date-picker" placeholder="Click here...">
+                                                <div class="form-group">
+                                                    <div id="bookingColor" class="event-tag">
+                                                        <span data-tag="bg-teal" class="bg-teal selected"></span>
+                                                        <span data-tag="bg-red" class="bg-red"></span>
+                                                        <span data-tag="bg-pink" class="bg-pink"></span>
+                                                        <span data-tag="bg-blue" class="bg-blue"></span>
+                                                        <span data-tag="bg-lime" class="bg-lime"></span>
+                                                        <span data-tag="bg-green" class="bg-green"></span>
+                                                        <span data-tag="bg-cyan" class="bg-cyan"></span>
+                                                        <span data-tag="bg-orange" class="bg-orange"></span>
+                                                        <span data-tag="bg-purple" class="bg-purple"></span>
+                                                        <span data-tag="bg-gray" class="bg-gray"></span>
+                                                        <span data-tag="bg-black" class="bg-black"></span>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-sm-4">
-                                            <p class="c-black  m-b-20">Time Picker</p>
-
-                                            <div class="input-group form-group">
-                                                <span class="input-group-addon"><i class="zmdi zmdi-time"></i></span>
-                                                <div class="dtp-container">
-                                                    <input type='text' class="form-control time-picker" placeholder="Click here...">
+                                                
+                                                <div class="form-group">
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                            <label for="bookingStartTime">Начало</label>
+                                                            <div class="input-group form-group">
+                                                                <span class="input-group-addon"><i class="zmdi zmdi-time"></i></span>
+                                                                <div class="dtp-container">
+                                                                    <input type='text' class="form-control time-picker" id="bookingStartTime" placeholder="Время...">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <label for="bookingStartTime">Окончание</label>
+                                                            <div class="input-group form-group">
+                                                                <span class="input-group-addon"><i class="zmdi zmdi-time"></i></span>
+                                                                <div class="dtp-container">
+                                                                    <input type='text' class="form-control time-picker" id="bookingEndTime" placeholder="Время...">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+<!--                                                        <div class="col-sm-6">
+                                                            <label for="bookingDuration">Длительность</label>
+                                                            <div class="input-group form-group">
+                                                                <select id="bookingDuration" class="selectpicker">
+                                                                    <option value="15" selected>15 мин</option>
+                                                                    <option value="30">30 мин</option>
+                                                                    <option value="45">45 мин</option>
+                                                                    <option value="60">1 ч</option>
+                                                                    <option value="75">1 ч 15 мин</option>
+                                                                    <option value="90">1 ч 30 мин</option>
+                                                                    <option value="120">2 ч 00 мин</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>-->
+                                                    </div>
                                                 </div>
-                                            </div>
+                                            </form>
                                         </div>
+
+<!-- Just calendar event -->
+<!--                                        <div role="tabpanel" class="tab-pane animated fadeIn" id="tabEvent">
+                                            <form id="formEvent" class="addEvent" role="form">
+                                                <input type="hidden" id="eventStart" />
+                                                <input type="hidden" id="eventEnd" /> 
+                                                <input type="hidden" id="eventId" /> 
+                                                
+                                                <div class="form-group">
+                                                    <div class="fg-line">
+                                                        <input type="text" class="input-sm form-control" id="eventName" placeholder="Краткое описание...">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <div id="eventColor" class="event-tag">
+                                                        <span data-tag="bg-teal" class="bg-teal selected"></span>
+                                                        <span data-tag="bg-red" class="bg-red"></span>
+                                                        <span data-tag="bg-pink" class="bg-pink"></span>
+                                                        <span data-tag="bg-blue" class="bg-blue"></span>
+                                                        <span data-tag="bg-lime" class="bg-lime"></span>
+                                                        <span data-tag="bg-green" class="bg-green"></span>
+                                                        <span data-tag="bg-cyan" class="bg-cyan"></span>
+                                                        <span data-tag="bg-orange" class="bg-orange"></span>
+                                                        <span data-tag="bg-purple" class="bg-purple"></span>
+                                                        <span data-tag="bg-gray" class="bg-gray"></span>
+                                                        <span data-tag="bg-black" class="bg-black"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-6">
+                                                        <div class="input-group form-group">
+                                                            <span class="input-group-addon"><i class="zmdi zmdi-calendar"></i></span>
+                                                            <div class="dtp-container">
+                                                                <input id="eventStartTime" type='text' class="form-control date-time-picker" placeholder="Начало...">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <div class="input-group form-group">
+                                                            <span class="input-group-addon"><i class="zmdi zmdi-calendar"></i></span>
+                                                            <div class="dtp-container">
+                                                                <input id="eventEndTime" type='text' class="form-control date-time-picker" placeholder="Окончание...">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>-->
+<!-- Calendar event tab end -->
                                     </div>
-                                </form>
+                                </div>
+                                
                             </div>
 
                             <div class="modal-footer">
-                                <button type="submit" class="btn btn-primary btn-sm" id="addEvent">Add Event</button>
-                                <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary btn-sm" id="saveEvent">Сохранить</button>
+                                <button type="button" class="btn btn-warning btn-sm" id="deleteEvent">Удалить</button>
+                                <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Отмена</button>
                             </div>
                         </div>
-                    </div>
+                    </div> <!-- Booking | Event modal dialog end -->
                 </div>
-
+                <audio id="alarmPlayer">
+                    <source src="img/alarm.mp3" type="audio/mpeg">
+                    Ваш браузер не поддерживает HTML5 Audio. Уведомление о календарном событии будет без звукового сигнала. 
+                </audio>
             </div>
         </section>
-
+        
         <footer id="footer">
             Copyright © 2016 CWPORT.COM
         </footer>
@@ -278,14 +370,24 @@
         <script src="vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
         <!-- Calendar on dashboard required scripts -->
-        <script src="vendors/bower_components/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
         <script src="vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
         <script src="vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
         <script src="vendors/bower_components/moment/min/moment.min.js"></script>
-        <script src="vendors/bower_components/fullcalendar/dist/fullcalendar.min.js "></script>
+        <script src="vendors/bower_components/moment/locale/ru.js"></script>
+        <script src="vendors/bower_components/moment/locale/uk.js"></script>
+
+<!--        <script src="vendors/bower_components/fullcalendar/dist/fullcalendar.min.js "></script>
+        <script src='vendors/bower_components/fullcalendar/dist/lang/ru.js'></script>-->
+
+        <script src="vendors/bower_components/fullcalendar-2.6.1/fullcalendar.min.js "></script>
+        <script src='vendors/bower_components/fullcalendar-2.6.1/lang/ru.js'></script>
+
         <script src="vendors/bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
 
         <!-- End of Calendar scripts -->
+        <script src="vendors/bower_components/bootstrap-select/dist/js/bootstrap-select.js"></script>
+        <!-- Notification dialogs -->
+        <script src="vendors/bower_components/bootstrap-sweetalert/lib/sweet-alert.min.js"></script>
 
         <!-- Placeholder for IE9 -->
         <!--[if IE 9 ]>
