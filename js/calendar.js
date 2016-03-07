@@ -4,21 +4,20 @@
  * and open the template in the editor.
  */
 var timer;
+var processedEvents = [];
 
+var ne = new NotificationEngine();
 
 function addMinutes(date, minutes) {
     return new Date(date.getTime() + minutes*60000);
 }
 
-function minutesUntil(deltamin, upcomingDate) {
+function munitesBefore(deltamin, upcomingDate) {
     var delta = Math.round((upcomingDate.getTime() - (new Date()).getTime())/60000);
-//    if(delta > 0) {
-//        console.log(Math.round((upcomingDate.getTime() - (new Date()).getTime())/60000));
-//    }
     return (deltamin == delta);
 }
 
-function alarm() {
+function playAlarm() {
     var player = document.getElementById('alarmPlayer');
     player.play();
 };
@@ -30,14 +29,23 @@ function processEvents() {
     if($.isArray(clientEvents)) {
         $.each(clientEvents, function (i, obj){
             // if 15 minutes till next event
-            if(minutesUntil(15, new Date(obj.start))) {
-                events.push({id: obj.id, title: obj.title, start: obj.start, end: obj.end});
+            if(munitesBefore(15, new Date(obj.start))) {
+                events.push({id: obj.id, title: obj.title, 
+                    clientName: obj.clientName, "clientPhone": obj.clientPhone,
+                    start: obj.start, end: obj.end});
             }
         });
     } 
     for(var i = 0; i < events.length; i++) {
-        // alarm();
-        swal('Запись на мойку', events[i].title, "warning");
+        playAlarm();
+        ne.processed.push(events[i]);
+        var body = events[i].title + ' ' + events[i].clientName
+                + ' ' + events[i].clientPhone;
+//        var body = '<h3>' + events[i].title + '<small>' + events[i].clientName 
+//                + ' <a href="tel:' + events[i].clientPhone + '">' + events[i].clientPhone + '</a></small></h3>';
+       // $('#notifications').parent().removeClass('hidden');
+       
+       ne.notify('Запись на мойку' + ' на ' + events[i].start.format('HH:mm'), body, true, '#notifications');
     }
 };
 
@@ -57,10 +65,11 @@ function addEvent(eventId, data) {
             end:  data.end,
             allDay: false,
             className: data.className,
+            eventColor: data.eventColor,
             clientName: data.clientName,
-            clientPhone: clientPhone,
-            carModel: carModel,
-            carNumber: carNumber
+            clientPhone: data.clientPhone,
+            carModel: data.carModel,
+            carNumber: data.carNumber
         }, true ); // Stick the event to calendar
         
     } catch(e) {
@@ -101,50 +110,56 @@ $(document).ready(function () {
         //Add Events
         events: [
             {
-                id: (new String('CAR TEST1')).replace(/\s/g, '_'),
-                title: 'CAR TEST1',
+                id: 'А023SPO',
+                title: 'Lexus А023SPO',
                 start: addMinutes(new Date(), 16),
                 end: addMinutes(new Date(), 46),
-                className: 'bg-yellow'
+                className: 'bg-green',
+                eventColor: 'bg-green',
+                clientName: 'МУХТАР АРМАН',
+                clientPhone: '87784338839',
+                carModel: 'Lexus',
+                carNumber: 'А023SPO'
             },
             {
-                id: (new String('CAR TEST2')).replace(/\s/g, '_'),
-                title: 'CAR TEST2',
+                id: '392DLA',
+                title: 'Mercedes 392DLA',
                 start: addMinutes(new Date(), 21),
                 end: addMinutes(new Date(), 81),
-                className: 'bg-orange'
+                className: 'bg-orange',
+                eventColor: 'bg-orange',
+                clientName: 'Абылай',
+                clientPhone: '87783515620',
+                carModel: 'Mercedes',
+                carNumber: '392DLA'
             },
             {
-                id: (new String('BMW KZ0298')).replace(/\s/g, '_'),
-                title: 'BMW KZ0298',
-                start: new Date(y, m, d, 10, 00, 00, 00),
-                end: new Date(y, m, d, 10, 30, 00, 00),
-                className: 'bg-red'
-            },
-            {
-                id: (new String('Opel 345678JK')).replace(/\s/g, '_'),
-                title: 'Opel 345678JK',
-                start: new Date(y, m, d, 10, 00, 00, 00),
-                end: new Date(y, m, d, 10, 30, 00, 00),
-                className: 'bg-green'
-            },
-            {
-                id: (new String('Toyota Camry 777KGB')).replace(/\s/g, '_'),
-                title: 'Toyota Camry 777KGB',
+                id: '852DKA',
+                title: 'Volkswagen 852DKA',
                 start: new Date(y, m, d, 10, 30, 00, 00),
                 end: new Date(y, m, d, 10, 45, 00, 00),
-                className: 'bg-black'
+                className: 'bg-pink',
+                eventColor: 'bg-pink',
+                clientName: 'Алена',
+                clientPhone: '87773937623',
+                carModel: 'Volkswagen',
+                carNumber: '852DKA'
             }
         ],
         //On Day Select
         select: function (start, end, allDay) {
-            $('#clientName').val();
-            $('#clientPhone').val();
-            $('#carModel').val();
-            $('#carNumber').val();
+            $('#clientName').val('');
+            $('#clientPhone').val('');
+            $('#carModel').val('');
+            $('#carNumber').val('');
             $('#bookingStartTime').data('DateTimePicker').date(start);
             $('#bookingEndTime').data('DateTimePicker').date(end);
             $('#eventId').val('');
+            // set color tag
+            $('.event-tag > span').removeClass('selected');
+            $('.event-tag > span:first-child').addClass('selected');
+            $('#deleteEvent').addClass('hidden');
+            // show dialog
             $('#dialogEvent').modal('show');
         },
         eventClick: function (calEvent, jsEvent, view) {
@@ -157,6 +172,11 @@ $(document).ready(function () {
             $('#clientPhone').val(calEvent.clientPhone);
             $('#carModel').val(calEvent.carModel);
             $('#carNumber').val(calEvent.carNumber);
+            // set color tag
+            $('.event-tag > span').removeClass('selected');
+            $('.event-tag > span[data-tag="' + calEvent.eventColor + '"]').addClass('selected');
+            $('#deleteEvent').removeClass('hidden');
+            // show dialog
             $('#dialogEvent').modal('show');
         }
     });
@@ -173,7 +193,7 @@ $(document).ready(function () {
     $('body').on('click', '#saveEvent', function () {
         // var eventName = $('#eventName').val();
         var eventId = $('#eventId').val();
-        var tagColor = $('.event-tag > span.selected').attr('data-tag');
+        var eventColor = $('.event-tag > span.selected').attr('data-tag');
         var clientName = $('#clientName').val();
         var clientPhone = $('#clientPhone').val();
         var carModel = $('#carModel').val();
@@ -183,7 +203,8 @@ $(document).ready(function () {
         if(eventId == '' || eventId == undefined) { eventId = carNumber; }
         updateEvent(eventId, 
             {"title": (carModel + ' ' + carNumber), 
-            "className": tagColor,   
+            "className": eventColor,
+            "eventColor": eventColor,
             "start": $('#bookingStartTime').data('DateTimePicker').date(),
             "end": $('#bookingEndTime').data('DateTimePicker').date(), 
             "clientName": clientName, "clientPhone": clientPhone, 
@@ -236,10 +257,15 @@ $(document).ready(function () {
                 locale: 'ru',
                 format: 'DD/MM/YYYY hh:mm'
     });
+
+    if(ne.checkSupport()) {
+        // if !ne.granted
+        ne.requestPermission();
+    }
     
     (function() {
         // set up timer for event processing
-        // timer = setInterval(processEvents, 10000); // every 1 min run event processing
+        timer = setInterval(processEvents, 60000); // every 1 min run event processing
     })();
 });
 
