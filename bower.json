@@ -5,8 +5,6 @@
     "skyfunker <aisayev@yandex.ru>"
   ],
   "description": "",
-  "main": "dashboard.html",
-  "moduleType": [],
   "license": "MIT",
   "ignore": [
     "**/.*",
@@ -14,5 +12,21 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "jquery": "*",
+    "bootstrap": "latest",
+    "bootstrap-select": "latest",
+    "bootstrap-sweetalert": "latest",
+    "eonasdan-bootstrap-datetimepicker": "latest",
+    "animate.css": "latest",
+    "jquery.bootgrid": "latest",
+    "jquery-mousewheel": "latest",
+    "malihu-custom-scrollbar-plugin": "latest",
+    "material-design-iconic-font": "latest",
+    "moment": "latest",
+    "fullcalendar": "2.6.1",
+    "jquery.i18n": "^1.0.4",
+    "bootstrap-growl": "^1.1.0"
+  }
 }
