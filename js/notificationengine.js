@@ -40,7 +40,7 @@ function NotificationEngine() {
     this.notify = function(title, body, modal, parentid) {
         if(this.supported && this.granted) {
             var n = new Notification(title, { body: body, icon: this.icon});
-            setTimeout(n.close.bind(n), 5000);
+            setTimeout(n.close.bind(n), 60000); // close desktop popup in 60 sec
         } else {
             // Show sweet alarm (script has to be included)
             if(modal) {

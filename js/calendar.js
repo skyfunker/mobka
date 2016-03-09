@@ -97,7 +97,7 @@ $(document).ready(function () {
         defaultView: 'agendaDay',
         // nowIndicator: true, // available from v.2.6
         allDaySlot: false,
-        // slotDuration: '00:15:00',
+        slotDuration: '00:15:00',
         header: {
             right: '',
             center: 'prev, title, next',
