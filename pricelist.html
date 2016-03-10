@@ -9,9 +9,11 @@
         
         <link href="vendors/bower_components/animate.css/animate.min.css" rel="stylesheet">
         <link href="vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
+        <link href="vendors/bower_components/jquery.bootgrid/dist/jquery.bootgrid.css" rel="stylesheet">
+
         <link href="vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
         
-        <link href="css/app.min.css" rel="stylesheet">
+        <link href="css/app.css" rel="stylesheet">
         <link rel="stylesheet" href="css/cw.css" class="style">    
     
     </head>
@@ -141,61 +143,21 @@
                         <div class="th-title">Услуги и цены <small>Данные прайс-листа используются при оформлении накладных</small></div>
                     </div>
 
-                    <table id="data-table-command" class="table table-bordered table-vmiddle">
+                    <table id="grid-pricelist" class="table table-bordered table-vmiddle">
                         <thead>
                             <tr>
-<!--                                <th data-column-id="id" data-type="numeric">ID</th>-->
-                                <th data-column-id="inservice">Вкл.</th>
-                                <th data-column-id="inaction">Акц.</th>
-                                <th data-column-id="servicename" data-order="asc">Услуга</th>
-                                <th data-column-id="pricea">Класс А</th>
-                                <th data-column-id="priceb">Класс B</th>
-                                <th data-column-id="pricec">Класс C</th>
-                                <th data-column-id="priced">Класс D</th>
-                                <th data-column-id="commands" data-formatter="commands" data-sortable="false">Commands</th>
+                                <th data-column-id="pricelistId" data-visible="false">ID</th>
+                                <th data-column-id="inService" data-formatter="inservice" data-width="5%">Вкл.</th>
+                                <th data-column-id="inAction" data-formatter="inaction" data-width="5%">Акц.</th>
+                                <th data-column-id="serviceName" data-order="asc" data-sortable="true" data-width="40%">Услуга</th>
+                                <th data-column-id="priceA" data-sortable="false" data-width="10%">Класс А</th>
+                                <th data-column-id="priceB" data-sortable="false" data-width="10%">Класс B</th>
+                                <th data-column-id="priceC" data-sortable="false" data-width="10%">Класс C</th>
+                                <th data-column-id="priceD" data-sortable="false" data-width="10%">Класс D</th>
+                                <th data-column-id="commands" data-formatter="commands" data-sortable="false" data-width="10%">Commands</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>                        
-                                    <div class="checkbox cr-alt m-b-20">
-                                        <label>
-                                            <input type="checkbox" value="" checked>
-                                            <i class="input-helper"></i>
-                                        </label>
-                                    </div>
-                                </td>
-                                <td>                        
-                                    <div class="checkbox cr-alt m-b-20">
-                                        <label>
-                                            <input type="checkbox" value="1">
-                                            <i class="input-helper"></i>
-                                        </label>
-                                    </div>
-                                </td>
-                                <td>БЕСКОНТАКТНАЯ МОЙКА <small>Kaercher аппарат</small></td>
-                                <td>85.00</td><td>100.00</td><td>115.00</td><td>130.00</td>
-                            </tr>
-                            <tr>
-                                <td>                        
-                                    <div class="checkbox cr-alt m-b-20">
-                                        <label>
-                                            <input type="checkbox" value="" checked>
-                                            <i class="input-helper"></i>
-                                        </label>
-                                    </div>
-                                </td>
-                                <td>                        
-                                    <div class="checkbox cr-alt m-b-20">
-                                        <label>
-                                            <input type="checkbox" value="1">
-                                            <i class="input-helper"></i>
-                                        </label>
-                                    </div>
-                                </td>
-                                <td>Влажная уборка <small>Спецтряпками</small></td>
-                                <td>85.00</td><td>100.00</td><td>115.00</td><td>130.00</td>
-                            </tr>
                         </tbody>
                     </table>
                 </div>
@@ -254,8 +216,8 @@
         <script src="vendors/bower_components/jquery/dist/jquery.min.js"></script>
         <script src="vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
-        <script src="vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
-        <script src="vendors/bower_components/jquery.bootgrid/dist/jquery.bootgrid-override.min.js"></script>
+        <script src="vendors/bower_components/bootstrap-growl/jquery.bootstrap-growl.min.js"></script>
+        <script src="vendors/bower_components/jquery.bootgrid/dist/jquery.bootgrid.min.js"></script>
 
         
         <!-- Placeholder for IE9 -->
