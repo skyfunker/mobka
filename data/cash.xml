@@ -1,0 +1,117 @@
+    <cashflow>
+        <totalCount>38</totalCount>
+        <cash cashId="175972" stationId="176" opDate="2016-02-01 22:06:00" cashopId="107" userId="523" summa="-333.00">
+            <comments>LYOSHA</comments>
+        </cash>
+        <cash cashId="175971" stationId="176" opDate="2016-02-01 22:05:00" cashopId="107" userId="523" summa="-80.00">
+            <comments>LYOSHA</comments>
+        </cash>
+        <cash cashId="175970" stationId="176" opDate="2016-02-01 22:00:00" cashopId="1" userId="0" summa="30.00">
+            <comments>Оплата услуг по накладной №160201-2159</comments>
+        </cash>
+        <cash cashId="175969" stationId="176" opDate="2016-02-01 21:41:00" cashopId="1" userId="0" summa="80.00">
+            <comments>Оплата услуг по накладной №160201-2112</comments>
+        </cash>
+        <cash cashId="175967" stationId="176" opDate="2016-02-01 19:46:00" cashopId="107" userId="523" summa="-101.87">
+            <comments>SLAVIK</comments>
+        </cash>
+        <cash cashId="175964" stationId="176" opDate="2016-02-01 19:31:00" cashopId="107" userId="523" summa="-95.00">
+            <comments>DIMA</comments>
+        </cash>
+        <cash cashId="175962" stationId="176" opDate="2016-02-01 19:27:00" cashopId="1" userId="0" summa="115.00">
+            <comments>Оплата услуг по накладной №160201-1905</comments>
+        </cash>
+        <cash cashId="175956" stationId="176" opDate="2016-02-01 18:23:00" cashopId="107" userId="523" summa="-45.88">
+            <comments>andrey</comments>
+        </cash>
+        <cash cashId="175955" stationId="176" opDate="2016-02-01 17:51:00" cashopId="109" userId="523" summa="-50.00">
+            <comments>KULKIn</comments>
+        </cash>
+        <cash cashId="175954" stationId="176" opDate="2016-02-01 17:40:00" cashopId="1" userId="0" summa="55.00">
+            <comments>Оплата услуг по накладной №160201-1727</comments>
+        </cash>
+        <cash cashId="175953" stationId="176" opDate="2016-02-01 17:23:00" cashopId="1" userId="0" summa="49.50">
+            <comments>Оплата услуг по накладной №160201-1656</comments>
+        </cash>
+        <cash cashId="175952" stationId="176" opDate="2016-02-01 17:22:00" cashopId="113" userId="523" summa="10.00">
+            <comments></comments>
+        </cash>
+        <cash cashId="175951" stationId="176" opDate="2016-02-01 17:06:00" cashopId="107" userId="523" summa="-146.25">
+            <comments>YURA</comments>
+        </cash>
+        <cash cashId="175944" stationId="176" opDate="2016-02-01 16:18:00" cashopId="113" userId="523" summa="5.00">
+            <comments></comments>
+        </cash>
+        <cash cashId="175945" stationId="176" opDate="2016-02-01 16:18:00" cashopId="113" userId="523" summa="5.00">
+            <comments></comments>
+        </cash>
+        <cash cashId="175943" stationId="176" opDate="2016-02-01 16:15:00" cashopId="1" userId="0" summa="90.00">
+            <comments>Оплата услуг по накладной №160201-1545</comments>
+        </cash>
+        <cash cashId="175941" stationId="176" opDate="2016-02-01 16:09:00" cashopId="1" userId="0" summa="90.00">
+            <comments>Оплата услуг по накладной №160201-1516</comments>
+        </cash>
+        <cash cashId="175942" stationId="176" opDate="2016-02-01 16:09:00" cashopId="1" userId="0" summa="90.00">
+            <comments>Оплата услуг по накладной №160201-1523</comments>
+        </cash>
+        <cash cashId="175938" stationId="176" opDate="2016-02-01 15:48:00" cashopId="113" userId="523" summa="10.00">
+            <comments></comments>
+        </cash>
+        <cash cashId="175937" stationId="176" opDate="2016-02-01 15:43:00" cashopId="108" userId="523" summa="-600.00">
+            <comments></comments>
+        </cash>
+        <cash cashId="175934" stationId="176" opDate="2016-02-01 15:27:00" cashopId="1" userId="0" summa="54.00">
+            <comments>Оплата услуг по накладной №160201-1515</comments>
+        </cash>
+        <cash cashId="175933" stationId="176" opDate="2016-02-01 15:22:00" cashopId="113" userId="523" summa="10.00">
+            <comments></comments>
+        </cash>
+        <cash cashId="175932" stationId="176" opDate="2016-02-01 15:20:00" cashopId="1" userId="0" summa="80.00">
+            <comments>Оплата услуг по накладной №160201-1455</comments>
+        </cash>
+        <cash cashId="175928" stationId="176" opDate="2016-02-01 14:47:00" cashopId="113" userId="523" summa="10.00">
+            <comments></comments>
+        </cash>
+        <cash cashId="175927" stationId="176" opDate="2016-02-01 14:39:00" cashopId="1" userId="0" summa="135.00">
+            <comments>Оплата услуг по накладной №160201-1404</comments>
+        </cash>
+        <cash cashId="175925" stationId="176" opDate="2016-02-01 14:29:00" cashopId="1" userId="0" summa="80.00">
+            <comments>Оплата услуг по накладной №160201-1356</comments>
+        </cash>
+        <cash cashId="175923" stationId="176" opDate="2016-02-01 14:14:00" cashopId="1" userId="0" summa="225.00">
+            <comments>Оплата услуг по накладной №160201-1320</comments>
+        </cash>
+        <cash cashId="175919" stationId="176" opDate="2016-02-01 13:54:00" cashopId="113" userId="523" summa="10.00">
+            <comments></comments>
+        </cash>
+        <cash cashId="175918" stationId="176" opDate="2016-02-01 13:51:00" cashopId="1" userId="0" summa="121.50">
+            <comments>Оплата услуг по накладной №160201-1257</comments>
+        </cash>
+        <cash cashId="175916" stationId="176" opDate="2016-02-01 13:36:00" cashopId="1" userId="0" summa="100.00">
+            <comments>Оплата услуг по накладной №160201-1255</comments>
+        </cash>
+        <cash cashId="175914" stationId="176" opDate="2016-02-01 13:28:00" cashopId="1" userId="0" summa="162.00">
+            <comments>Оплата услуг по накладной №160201-1145</comments>
+        </cash>
+        <cash cashId="175911" stationId="176" opDate="2016-02-01 13:19:00" cashopId="1" userId="0" summa="108.00">
+            <comments>Оплата услуг по накладной №160201-1259</comments>
+        </cash>
+        <cash cashId="175909" stationId="176" opDate="2016-02-01 12:55:00" cashopId="1" userId="0" summa="72.00">
+            <comments>Оплата услуг по накладной №160201-1208</comments>
+        </cash>
+        <cash cashId="175899" stationId="176" opDate="2016-02-01 11:45:00" cashopId="1" userId="0" summa="72.00">
+            <comments>Оплата услуг по накладной №160201-1144</comments>
+        </cash>
+        <cash cashId="175898" stationId="176" opDate="2016-02-01 11:44:00" cashopId="1" userId="0" summa="36.00">
+            <comments>Оплата услуг по накладной №160201-1052</comments>
+        </cash>
+        <cash cashId="175887" stationId="176" opDate="2016-02-01 10:52:00" cashopId="1" userId="0" summa="30.00">
+            <comments>Оплата услуг по накладной №160201-1049</comments>
+        </cash>
+        <cash cashId="175877" stationId="176" opDate="2016-02-01 08:46:00" cashopId="113" userId="523" summa="5.00">
+            <comments></comments>
+        </cash>
+        <cash cashId="175871" stationId="176" opDate="2016-02-01 08:06:00" cashopId="3" userId="523" summa="52.00">
+            <comments></comments>
+        </cash>
+    </cashflow>

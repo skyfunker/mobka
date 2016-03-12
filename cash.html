@@ -9,12 +9,13 @@
         
         <link href="vendors/bower_components/animate.css/animate.min.css" rel="stylesheet">
         <link href="vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
-        <link href="vendors/bower_components/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet">
+        <link href="vendors/bower_components/jquery.bootgrid/dist/jquery.bootgrid.css" rel="stylesheet">
+
         <link href="vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
-        
-        <link href="css/app.min.css" rel="stylesheet">
+
+        <link href="css/app.css" rel="stylesheet">
         <link rel="stylesheet" href="css/cw.css" class="style">    
-    
+
     </head>
 
     <body>
@@ -134,11 +135,34 @@
 
         <section id="content">
             <div class="container">
-                <header class="page-header">
+<!--                <header class="page-header">
                     <h3>Движения по кассе за 18.02.2016</h3>
-                </header>
-<!-- Data table with record list  -->
-           
+                </header>-->
+                <!-- Data table with record list  -->
+                <div class="tile">
+                    <div class="t-header">
+                        <div class="th-title">Движения по кассе <small>за <span id="workingDate"></span></small></div>
+                    </div>
+
+                    <table id="grid-cash" class="table table-bordered table-vmiddle">
+                        <thead>
+                            <tr>
+                                <th data-sortable="false" data-width="20%" data-column-id="opDate" data-formatter="date">Время</th>
+                                <th data-sortable="false" data-width="20%" data-column-id="cashopId" data-formatter="cashop">Операция</th>
+                                <th data-sortable="false" data-width="20%" data-align="right" data-column-id="total" data-formatter="sum">Сумма</th>
+                                <th data-sortable="false" data-width="40%" data-column-id="comments">Комментар</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                        <tfoot>
+                            <tr><td class="text-center" colspan="8">    
+                                    <button id="btnAddInvoice" class="btn btn-danger btn-icon"><i class="zmdi zmdi-plus"></i></button>
+                                </td></tr>
+                        </tfoot>
+                    </table>
+                </div>
+
             </div>
         </section>
         
@@ -192,7 +216,11 @@
         <!-- Javascript Libraries -->
         <script src="vendors/bower_components/jquery/dist/jquery.min.js"></script>
         <script src="vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-        
+        <script src="vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="vendors/bower_components/bootstrap-growl/jquery.bootstrap-growl.min.js"></script>
+        <script src="vendors/bower_components/jquery.bootgrid/dist/jquery.bootgrid.min.js"></script>
+
+        <script src="vendors/bower_components/moment/min/moment.min.js"></script>
         <!-- Placeholder for IE9 -->
         <!--[if IE 9 ]>
             <script src="vendors/bower_components/jquery-placeholder/jquery.placeholder.min.js"></script>
