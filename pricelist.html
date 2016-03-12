@@ -146,19 +146,22 @@
                     <table id="grid-pricelist" class="table table-bordered table-vmiddle">
                         <thead>
                             <tr>
-                                <th data-column-id="pricelistId" data-visible="false">ID</th>
-                                <th data-column-id="inService" data-formatter="inservice" data-width="5%">Вкл.</th>
-                                <th data-column-id="inAction" data-formatter="inaction" data-width="5%">Акц.</th>
-                                <th data-column-id="serviceName" data-order="asc" data-sortable="true" data-width="40%">Услуга</th>
-                                <th data-column-id="priceA" data-sortable="false" data-width="10%">Класс А</th>
-                                <th data-column-id="priceB" data-sortable="false" data-width="10%">Класс B</th>
-                                <th data-column-id="priceC" data-sortable="false" data-width="10%">Класс C</th>
-                                <th data-column-id="priceD" data-sortable="false" data-width="10%">Класс D</th>
-                                <th data-column-id="commands" data-formatter="commands" data-sortable="false" data-width="10%">Commands</th>
+                                <th data-column-id="flags" data-formatter="flags"  data-align="center" data-sortable="false" data-width="12%">Метки</th>
+                                <th data-column-id="serviceName" data-order="asc" data-sortable="true" data-width="38%">Услуга</th>
+                                <th data-column-id="priceA" data-sortable="false" data-align="right" data-width="10%">Класс А</th>
+                                <th data-column-id="priceB" data-sortable="false" data-align="right" data-width="10%">Класс B</th>
+                                <th data-column-id="priceC" data-sortable="false" data-align="right" data-width="10%">Класс C</th>
+                                <th data-column-id="priceD" data-sortable="false" data-align="right" data-width="10%">Класс D</th>
+                                <th data-column-id="commands" data-formatter="commands" data-align="left" data-sortable="false" data-width="10%"></th>
                             </tr>
                         </thead>
                         <tbody>
                         </tbody>
+                        <tfoot>
+                            <tr><td class="text-center" colspan="7">    
+                                <button id="btnAddService" class="btn btn-danger btn-icon"><i class="zmdi zmdi-plus"></i></button>
+                            </td></tr>
+                        </tfoot>
                     </table>
                 </div>
             </div>
