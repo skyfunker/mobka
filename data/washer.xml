@@ -1,0 +1,22 @@
+    <washers>
+        <washer washerId="33" stationId="27" working="1" salary="25.00" fullName="Смена 1"></washer>
+        <washer washerId="34" stationId="27" working="1" salary="25.00" fullName="Смена 2"></washer>
+        <washer washerId="36" stationId="27" working="0" salary="25.00" fullName="Игорь Душейко"></washer>
+        <washer washerId="37" stationId="27" working="0" salary="25.00" fullName="Дмитрий Шаров"></washer>
+        <washer washerId="38" stationId="27" working="0" salary="25.00" fullName="Алексей Марченко"></washer>
+        <washer washerId="39" stationId="27" working="0" salary="25.00" fullName="Даша Соболь"></washer>
+        <washer washerId="40" stationId="27" working="0" salary="25.00" fullName="Александр Курченко"></washer>
+        <washer washerId="212" stationId="27" working="1" salary="25.00" fullName="Тонких Александр"></washer>
+        <washer washerId="213" stationId="27" working="0" salary="25.00" fullName="Яицкий Сергей"></washer>
+        <washer washerId="214" stationId="27" working="0" salary="25.00" fullName="Зарудний Роман"></washer>
+        <washer washerId="215" stationId="27" working="0" salary="25.00" fullName="Рудюк Александр"></washer>
+        <washer washerId="222" stationId="27" working="0" salary="25.00" fullName="Комаров Сергей"></washer>
+        <washer washerId="223" stationId="27" working="0" salary="25.00" fullName="Лебеденко Александр"></washer>
+        <washer washerId="224" stationId="27" working="0" salary="25.00" fullName="Стрилец Андрей"></washer>
+        <washer washerId="225" stationId="27" working="0" salary="25.00" fullName="Капшивый Виталий"></washer>
+        <washer washerId="231" stationId="27" working="1" salary="25.00" fullName="Чехлань Александр"></washer>
+        <washer washerId="236" stationId="27" working="0" salary="0.00" fullName="Шатров Артем"></washer>
+        <washer washerId="237" stationId="27" working="1" salary="25.00" fullName="Петрусенко Сергей"></washer>
+        <washer washerId="238" stationId="27" working="0" salary="25.00" fullName="Усык Виталий"></washer>
+        <washer washerId="239" stationId="27" working="1" salary="25.00" fullName="Смит"></washer>
+    </washers>

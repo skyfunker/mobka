@@ -5,7 +5,7 @@
         <meta name="format-detection" content="telephone=no">
         <meta charset="UTF-8">
 
-        <title>CWPORT Услуги и цены</title>
+        <title>CWPORT Кассовые Операции</title>
         
         <link href="vendors/bower_components/animate.css/animate.min.css" rel="stylesheet">
         <link href="vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
@@ -102,7 +102,7 @@
                         <span>Статистика</span>
                     </a>
                 </li>
-                <li class="active">
+                <li>
                     <a href="pricelist.html">
                         <i class="zmdi zmdi-view-headline"></i>
                         <span>Услуги и цены</span>
@@ -114,14 +114,14 @@
                         <span>Календарь <span class="label label-primary">12</span></span>
                     </a>
                 </li>
-                <li class="sm-sub">
+                <li class="sm-sub active">
                     <a href="">
                         <i class="zmdi zmdi-settings"></i>
                         <span>Настройки</span>
                     </a>
                     <ul>
                         <li><a href="settings.html">Параметры</a></li>
-                        <li><a href="cashops.html">Кассовые Операции</a></li>
+                        <li class="active"><a href="cashops.html">Кассовые Операции</a></li>
                         <li><a href="users.html">Пользователи</a></li>
                         <li><a href="washers.html">Мойщики</a></li>
                         <li><a href="company.html">Компания</a></li>
@@ -147,26 +147,22 @@
                 </header>-->
                 <div class="tile">
                     <div class="t-header">
-                        <div class="th-title">Услуги и цены <small>Данные прайс-листа используются при оформлении накладных</small></div>
+                        <div class="th-title">Кассовые операции<small>Учет кассовых операций при расчет прибыли помечается галочкой</small></div>
                     </div>
 
-                    <table id="grid-pricelist" class="table table-bordered table-vmiddle">
+                    <table id="grid-data" class="table table-bordered table-vmiddle">
                         <thead>
                             <tr>
-                                <th data-column-id="flags" data-formatter="flags"  data-align="center" data-sortable="false" data-width="12%">Метки</th>
-                                <th data-column-id="serviceName" data-order="asc" data-sortable="true" data-width="38%">Услуга</th>
-                                <th data-column-id="priceA" data-sortable="false" data-align="right" data-width="10%">Класс А</th>
-                                <th data-column-id="priceB" data-sortable="false" data-align="right" data-width="10%">Класс B</th>
-                                <th data-column-id="priceC" data-sortable="false" data-align="right" data-width="10%">Класс C</th>
-                                <th data-column-id="priceD" data-sortable="false" data-align="right" data-width="10%">Класс D</th>
-                                <th data-column-id="commands" data-formatter="commands" data-align="left" data-sortable="false" data-width="10%"></th>
+                                <th data-column-id="flags" data-formatter="flags"  data-align="center" data-sortable="false" data-width="15%"></th>
+                                <th data-column-id="operation" data-order="asc" data-sortable="true" data-width="70%">Кассовая операция</th>
+                                <th data-column-id="commands" data-formatter="commands" data-align="left" data-sortable="false" data-width="15%"></th>
                             </tr>
                         </thead>
                         <tbody>
                         </tbody>
                         <tfoot>
-                            <tr><td class="text-center" colspan="7">    
-                                <button id="btnAddService" class="btn btn-danger btn-icon"><i class="zmdi zmdi-plus"></i></button>
+                            <tr><td class="text-center" colspan="4">    
+                                <button id="btnAdd" class="btn btn-danger btn-icon"><i class="zmdi zmdi-plus"></i></button>
                             </td></tr>
                         </tfoot>
                     </table>
@@ -237,6 +233,6 @@
         <![endif]-->
         
         <script src="js/functions.js"></script>
-        <script src="js/pricelist.js"></script>
+        <script src="js/cashops.js"></script>
     </body>
 </html>

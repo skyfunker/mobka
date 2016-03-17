@@ -1,0 +1,147 @@
+{
+    "current": 1,
+    "rowCount": 10,
+    "rows": [
+      {
+        "washerId": "33",
+        "stationId": "27",
+        "working": "1",
+        "salary": "25.00",
+        "fullName": "Смена 1"
+      },
+      {
+        "washerId": "34",
+        "stationId": "27",
+        "working": "1",
+        "salary": "25.00",
+        "fullName": "Смена 2"
+      },
+      {
+        "washerId": "36",
+        "stationId": "27",
+        "working": "0",
+        "salary": "25.00",
+        "fullName": "Игорь Душейко"
+      },
+      {
+        "washerId": "37",
+        "stationId": "27",
+        "working": "0",
+        "salary": "25.00",
+        "fullName": "Дмитрий Шаров"
+      },
+      {
+        "washerId": "38",
+        "stationId": "27",
+        "working": "0",
+        "salary": "25.00",
+        "fullName": "Алексей Марченко"
+      },
+      {
+        "washerId": "39",
+        "stationId": "27",
+        "working": "0",
+        "salary": "25.00",
+        "fullName": "Даша Соболь"
+      },
+      {
+        "washerId": "40",
+        "stationId": "27",
+        "working": "0",
+        "salary": "25.00",
+        "fullName": "Александр Курченко"
+      },
+      {
+        "washerId": "212",
+        "stationId": "27",
+        "working": "1",
+        "salary": "25.00",
+        "fullName": "Тонких Александр"
+      },
+      {
+        "washerId": "213",
+        "stationId": "27",
+        "working": "0",
+        "salary": "25.00",
+        "fullName": "Яицкий Сергей"
+      },
+      {
+        "washerId": "214",
+        "stationId": "27",
+        "working": "0",
+        "salary": "25.00",
+        "fullName": "Зарудний Роман"
+      },
+      {
+        "washerId": "215",
+        "stationId": "27",
+        "working": "0",
+        "salary": "25.00",
+        "fullName": "Рудюк Александр"
+      },
+      {
+        "washerId": "222",
+        "stationId": "27",
+        "working": "0",
+        "salary": "25.00",
+        "fullName": "Комаров Сергей"
+      },
+      {
+        "washerId": "223",
+        "stationId": "27",
+        "working": "0",
+        "salary": "25.00",
+        "fullName": "Лебеденко Александр"
+      },
+      {
+        "washerId": "224",
+        "stationId": "27",
+        "working": "0",
+        "salary": "25.00",
+        "fullName": "Стрилец Андрей"
+      },
+      {
+        "washerId": "225",
+        "stationId": "27",
+        "working": "0",
+        "salary": "25.00",
+        "fullName": "Капшивый Виталий"
+      },
+      {
+        "washerId": "231",
+        "stationId": "27",
+        "working": "1",
+        "salary": "25.00",
+        "fullName": "Чехлань Александр"
+      },
+      {
+        "washerId": "236",
+        "stationId": "27",
+        "working": "0",
+        "salary": "0.00",
+        "fullName": "Шатров Артем"
+      },
+      {
+        "washerId": "237",
+        "stationId": "27",
+        "working": "1",
+        "salary": "25.00",
+        "fullName": "Петрусенко Сергей"
+      },
+      {
+        "washerId": "238",
+        "stationId": "27",
+        "working": "0",
+        "salary": "25.00",
+        "fullName": "Усык Виталий"
+      },
+      {
+        "washerId": "239",
+        "stationId": "27",
+        "working": "1",
+        "salary": "25.00",
+        "fullName": "Смит"
+      }
+    ],
+    "total": 20
+  }

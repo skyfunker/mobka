@@ -1,0 +1,63 @@
+{
+    "current": 1,
+    "rowCount": 10,
+    "rows": [
+      {
+        "cashopId": "37",
+        "stationId": "27",
+        "opType": "-1",
+        "inCount": "1",
+        "operation": "Аванс"
+      },
+      {
+        "cashopId": "5",
+        "stationId": "27",
+        "opType": "1",
+        "inCount": "1",
+        "operation": "Аренда (кооператив)"
+      },
+      {
+        "cashopId": "6",
+        "stationId": "27",
+        "opType": "-1",
+        "inCount": "1",
+        "operation": "Возврат"
+      },
+      {
+        "cashopId": "7",
+        "stationId": "27",
+        "opType": "-1",
+        "inCount": "1",
+        "operation": "Газета"
+      },
+      {
+        "cashopId": "34",
+        "stationId": "27",
+        "opType": "-1",
+        "inCount": "1",
+        "operation": "Химия"
+      },
+      {
+        "cashopId": "35",
+        "stationId": "27",
+        "opType": "-1",
+        "inCount": "1",
+        "operation": "Хоз.нужды"
+      },
+      {
+        "cashopId": "33",
+        "stationId": "27",
+        "opType": "-1",
+        "inCount": "1",
+        "operation": "Чай"
+      },
+      {
+        "cashopId": "36",
+        "stationId": "27",
+        "opType": "-1",
+        "inCount": "1",
+        "operation": "Электрик"
+      }
+    ],
+    "total": 8
+  }

@@ -5,14 +5,13 @@
         <meta name="format-detection" content="telephone=no">
         <meta charset="UTF-8">
 
-        <title>CWPORT Услуги и цены</title>
+        <title>CWPORT Настройки</title>
+        
         
         <link href="vendors/bower_components/animate.css/animate.min.css" rel="stylesheet">
         <link href="vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
-        <link href="vendors/bower_components/jquery.bootgrid/dist/jquery.bootgrid.css" rel="stylesheet">
-
         <link href="vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
-        
+
         <link href="css/app.css" rel="stylesheet">
         <link rel="stylesheet" href="css/cw.css" class="style">    
     
@@ -102,7 +101,7 @@
                         <span>Статистика</span>
                     </a>
                 </li>
-                <li class="active">
+                <li>
                     <a href="pricelist.html">
                         <i class="zmdi zmdi-view-headline"></i>
                         <span>Услуги и цены</span>
@@ -114,7 +113,7 @@
                         <span>Календарь <span class="label label-primary">12</span></span>
                     </a>
                 </li>
-                <li class="sm-sub">
+                <li class="sm-sub active">
                     <a href="">
                         <i class="zmdi zmdi-settings"></i>
                         <span>Настройки</span>
@@ -124,9 +123,10 @@
                         <li><a href="cashops.html">Кассовые Операции</a></li>
                         <li><a href="users.html">Пользователи</a></li>
                         <li><a href="washers.html">Мойщики</a></li>
-                        <li><a href="company.html">Компания</a></li>
+                        <li class="active"><a href="company.html">Компания</a></li>
                     </ul>
                 </li>
+                
                 <li class="sm-sub">
                     <a href="">
                         <i class="zmdi zmdi-phone"></i>
@@ -143,36 +143,123 @@
         <section id="content">
             <div class="container">
 <!--                <header class="page-header">
-                    <h3>Услуги и цены</h3>
+                    <h3>Настройки</h3>
                 </header>-->
-                <div class="tile">
-                    <div class="t-header">
-                        <div class="th-title">Услуги и цены <small>Данные прайс-листа используются при оформлении накладных</small></div>
-                    </div>
+                <div class="row">
+                    <!-- tile Точка обслуживания (Автомойка) -->
+                    <div class="col-sm-6">
+                        <div class="tile p-l-15 p-r-15">
+                            <form class="form-horizontal" role="form">
+                                <div class="t-header">
+                                    <div class="th-title">Контактная информация<small>Данные о станции автомойки</small></div>
+                                </div>
+                                <div class="t-body tb-padding">
+                                    <div class="form-group">
+                                        <label for="stationName">Наименование</label>
+                                        <input type="text" class="form-control" id="stationName" placeholder="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="address">Почтовый адрес</label>
+                                        <input type="text" class="form-control" id="address" placeholder="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="phone">Телефон</label>
+                                        <input type="tel" class="form-control" id="phone" placeholder="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Email</label>
+                                        <input type="email" class="form-control" id="email" placeholder="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="im">Мессенджер</label>
+                                        <input type="text" class="form-control" id="im" placeholder="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="geomap">Карта</label>
+                                        <input type="url" class="form-control" id="geomap" placeholder="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="latitude">Широта</label>
+                                        <input type="number" class="form-control" id="latitude" placeholder="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="longitude">Долгота</label>
+                                        <input type="number" class="form-control" id="longitude" placeholder="">
+                                    </div>
+                                    <div class="form-group">
+                                       <div class="col-sm-6 col-xs-6">
+                                            <button type="submit" class="btn btn-primary btn-sm btn-block">Сохранить</button>
+                                        </div>
+                                        <div class="col-sm-6 col-xs-6">
+                                            <button type="reset" class="btn btn-default btn-sm btn-block">Отмена</button>
+                                        </div>
+                                    </div>
 
-                    <table id="grid-pricelist" class="table table-bordered table-vmiddle">
-                        <thead>
-                            <tr>
-                                <th data-column-id="flags" data-formatter="flags"  data-align="center" data-sortable="false" data-width="12%">Метки</th>
-                                <th data-column-id="serviceName" data-order="asc" data-sortable="true" data-width="38%">Услуга</th>
-                                <th data-column-id="priceA" data-sortable="false" data-align="right" data-width="10%">Класс А</th>
-                                <th data-column-id="priceB" data-sortable="false" data-align="right" data-width="10%">Класс B</th>
-                                <th data-column-id="priceC" data-sortable="false" data-align="right" data-width="10%">Класс C</th>
-                                <th data-column-id="priceD" data-sortable="false" data-align="right" data-width="10%">Класс D</th>
-                                <th data-column-id="commands" data-formatter="commands" data-align="left" data-sortable="false" data-width="10%"></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                        </tbody>
-                        <tfoot>
-                            <tr><td class="text-center" colspan="7">    
-                                <button id="btnAddService" class="btn btn-danger btn-icon"><i class="zmdi zmdi-plus"></i></button>
-                            </td></tr>
-                        </tfoot>
-                    </table>
+                                </div>
+                            </form>
+                        </div>
+                    </div>    
+                    <!-- / tile Точка обслуживания (Автомойка) -->
+                    <!-- tile Данные о компании (юр.лицо, ФОП) -->
+                    <div class="col-sm-6">
+                        <div class="tile p-l-15 p-r-15">
+                            <form class="form-horizontal" role="form">
+                                <div class="t-header">
+                                    <div class="th-title">Компания<small>Информация о компании владельце автомойки (юр.лицо или предприниматель)</small></div>
+                                </div>
+                                <div class="t-body tb-padding">
+                                    <div class="form-group">
+                                        <label for="companyShortName">Краткое Имя</label>
+                                        <input type="text" class="form-control" id="companyShortName" placeholder="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="companyFullName">Краткое Имя</label>
+                                        <input type="text" class="form-control" id="companyFullName" placeholder="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="companyAddress">Почтовый адрес</label>
+                                        <input type="text" class="form-control" id="companyAddress" placeholder="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="companyPhone">Телефон</label>
+                                        <input type="tel" class="form-control" id="companyPhone" placeholder="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="companyFax">Факс</label>
+                                        <input type="tel" class="form-control" id="companyFax" placeholder="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Email</label>
+                                        <input type="email" class="form-control" id="email" placeholder="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="director">Директор</label>
+                                        <input type="text" class="form-control" id="director" placeholder="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="bookkeeper">Бухгалтер</label>
+                                        <input type="text" class="form-control" id="bookkeeper" placeholder="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="bank">Банк</label>
+                                        <input type="text" class="form-control" id="bank" placeholder="">
+                                    </div>
+                                    <div class="form-group">
+                                       <div class="col-sm-6 col-xs-6">
+                                            <button type="submit" class="btn btn-primary btn-sm btn-block">Сохранить</button>
+                                        </div>
+                                        <div class="col-sm-6 col-xs-6">
+                                            <button type="reset" class="btn btn-default btn-sm btn-block">Отмена</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>    
+                    <!-- / tile Точка обслуживания (Автомойка) -->
                 </div>
             </div>
-
         </section>
         
         <footer id="footer">
@@ -226,17 +313,15 @@
         <script src="vendors/bower_components/jquery/dist/jquery.min.js"></script>
         <script src="vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
-        <script src="vendors/bower_components/bootstrap-growl/jquery.bootstrap-growl.min.js"></script>
-        <script src="vendors/bower_components/jquery.bootgrid/dist/jquery.bootgrid.min.js"></script>
 
         <script src="vendors/bower_components/moment/min/moment.min.js"></script>
-
+        
         <!-- Placeholder for IE9 -->
         <!--[if IE 9 ]>
             <script src="vendors/bower_components/jquery-placeholder/jquery.placeholder.min.js"></script>
         <![endif]-->
         
         <script src="js/functions.js"></script>
-        <script src="js/pricelist.js"></script>
+        <script src="js/settings.js"></script>
     </body>
 </html>

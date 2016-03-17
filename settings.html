@@ -7,11 +7,12 @@
 
         <title>CWPORT Настройки</title>
         
+        
         <link href="vendors/bower_components/animate.css/animate.min.css" rel="stylesheet">
         <link href="vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
         <link href="vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
-        
-        <link href="css/app.min.css" rel="stylesheet">
+
+        <link href="css/app.css" rel="stylesheet">
         <link rel="stylesheet" href="css/cw.css" class="style">    
     
     </head>
@@ -112,16 +113,24 @@
                         <span>Календарь <span class="label label-primary">12</span></span>
                     </a>
                 </li>
-                <li class="active">
-                    <a href="settings.html">
+                <li class="sm-sub active">
+                    <a href="">
                         <i class="zmdi zmdi-settings"></i>
                         <span>Настройки</span>
                     </a>
+                    <ul>
+                        <li class="active"><a href="settings.html">Параметры</a></li>
+                        <li><a href="cashops.html">Кассовые Операции</a></li>
+                        <li><a href="users.html">Пользователи</a></li>
+                        <li><a href="washers.html">Мойщики</a></li>
+                        <li><a href="company.html">Компания</a></li>
+                    </ul>
                 </li>
+                
                 <li class="sm-sub">
                     <a href="">
                         <i class="zmdi zmdi-phone"></i>
-                        <span>Контакты</span>
+                        <span>Поддержка</span>
                     </a>
                     <ul>
                         <li><a href="tel:+380505555555">+380&nbsp;(50)&nbsp;555-5555</a></li>
@@ -133,11 +142,79 @@
 
         <section id="content">
             <div class="container">
-                <header class="page-header">
+<!--                <header class="page-header">
                     <h3>Настройки</h3>
-                </header>
-<!-- Data table with record list  -->
-           
+                </header>-->
+                <div class="row">
+                    <div class="col-sm-12">
+                    <!-- tile Parameters -->
+                        <div class="tile">
+                            <form class="form-horizontal" role="form">
+                                <div class="t-header">
+                                    <div class="th-title">Параметры <small>Базовые параметры системы</small></div>
+                                </div>
+                                <div class="t-body tb-padding">
+                                    <div class="form-group">
+                                        <label for="rpp">Записей на стр.</label>
+                                        <input type="number" class="form-control" id="rpp" placeholder="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="nds">НДС,%</label>
+                                        <input type="number" class="form-control" id="nds" placeholder="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="adminzp">ЗП администратора,%</label>
+                                        <input type="number" class="form-control" id="adminzp" placeholder="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="washerzp">ЗП мойщиков,%</label>
+                                        <input type="number" class="form-control" id="washerzp" placeholder="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="videoUrl">VideoServer URL</label>
+                                        <input type="url" class="form-control" id="videoUrl" placeholder="http://domain.com/video">
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="checkbox cr-alt">
+                                            <label>
+                                                <input type="checkbox" value="">
+                                                <i class="input-helper"></i>
+                                                Расчет ЗП с учетом скидок
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="checkbox cr-alt">
+                                            <label>
+                                                <input type="checkbox" value="">
+                                                <i class="input-helper"></i>
+                                                Разрешить записи "задним числом"
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="checkbox cr-alt">
+                                            <label>
+                                                <input type="checkbox" value="">
+                                                <i class="input-helper"></i>
+                                                Редактирование услуг накладной
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-6 col-xs-6">
+                                            <button type="submit" class="btn btn-primary btn-sm btn-block">Сохранить</button>
+                                        </div>
+                                        <div class="col-sm-6 col-xs-6">
+                                            <button type="reset" class="btn btn-default btn-sm btn-block">Отмена</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    
+                </div>
             </div>
         </section>
         
@@ -191,6 +268,9 @@
         <!-- Javascript Libraries -->
         <script src="vendors/bower_components/jquery/dist/jquery.min.js"></script>
         <script src="vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+
+        <script src="vendors/bower_components/moment/min/moment.min.js"></script>
         
         <!-- Placeholder for IE9 -->
         <!--[if IE 9 ]>

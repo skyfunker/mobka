@@ -1,0 +1,191 @@
+<cashops>
+    <cashop cashopId="37" stationId="27" opType="-1" inCount="1">
+        <operation>Аванс</operation>
+    </cashop>
+    <cashop cashopId="5" stationId="27" opType="-1" inCount="1">
+        <operation>Аренда (кооператив)</operation>
+    </cashop>
+    <cashop cashopId="6" stationId="27" opType="-1" inCount="1">
+        <operation>Возврат</operation>
+    </cashop>
+    <cashop cashopId="7" stationId="27" opType="-1" inCount="1">
+        <operation>Газета</operation>
+    </cashop>
+    <cashop cashopId="8" stationId="27" opType="-1" inCount="1">
+        <operation>Зарплата</operation>
+    </cashop>
+    <cashop cashopId="9" stationId="27" opType="-1" inCount="1">
+        <operation>Зарплата Адм. Александр Яровой</operation>
+    </cashop>
+    <cashop cashopId="10" stationId="27" opType="-1" inCount="1">
+        <operation>Зарплата Адм. Татьяна Литвиненко</operation>
+    </cashop>
+    <cashop cashopId="38" stationId="27" opType="-1" inCount="1">
+        <operation>Зарплата Алексей Милиция</operation>
+    </cashop>
+    <cashop cashopId="39" stationId="27" opType="-1" inCount="1">
+        <operation>Зарплата Алексей Писаренко</operation>
+    </cashop>
+    <cashop cashopId="42" stationId="27" opType="-1" inCount="1">
+        <operation>Зарплата Алина Морошан</operation>
+    </cashop>
+    <cashop cashopId="12" stationId="27" opType="-1" inCount="1">
+        <operation>Зарплата Артур Гурандо</operation>
+    </cashop>
+    <cashop cashopId="13" stationId="27" opType="-1" inCount="1">
+        <operation>Зарплата Вадик Власюк</operation>
+    </cashop>
+    <cashop cashopId="14" stationId="27" opType="-1" inCount="1">
+        <operation>Зарплата Виктор</operation>
+    </cashop>
+    <cashop cashopId="77" stationId="27" opType="-1" inCount="1">
+        <operation>Зарплата Гаврилюк Юлия</operation>
+    </cashop>
+    <cashop cashopId="15" stationId="27" opType="-1" inCount="1">
+        <operation>Зарплата ДИМА</operation>
+    </cashop>
+    <cashop cashopId="16" stationId="27" opType="-1" inCount="1">
+        <operation>Зарплата Евгений Лавриненко</operation>
+    </cashop>
+    <cashop cashopId="40" stationId="27" opType="-1" inCount="1">
+        <operation>Зарплата Евгений Самось</operation>
+    </cashop>
+    <cashop cashopId="68" stationId="27" opType="-1" inCount="1">
+        <operation>Зарплата Жебит Дмитрий</operation>
+    </cashop>
+    <cashop cashopId="74" stationId="27" opType="-1" inCount="1">
+        <operation>Зарплата Загорулько Алена</operation>
+    </cashop>
+    <cashop cashopId="66" stationId="27" opType="-1" inCount="1">
+        <operation>Зарплата Зарудный Роман</operation>
+    </cashop>
+    <cashop cashopId="17" stationId="27" opType="-1" inCount="1">
+        <operation>Зарплата Игорь Паленко</operation>
+    </cashop>
+    <cashop cashopId="18" stationId="27" opType="-1" inCount="1">
+        <operation>Зарплата ЛЕША</operation>
+    </cashop>
+    <cashop cashopId="43" stationId="27" opType="-1" inCount="1">
+        <operation>Зарплата Людмила Боднарь</operation>
+    </cashop>
+    <cashop cashopId="19" stationId="27" opType="-1" inCount="1">
+        <operation>Зарплата Никита Разувакин</operation>
+    </cashop>
+    <cashop cashopId="96" stationId="27" opType="-1" inCount="1">
+        <operation>Зарплата Петрусенко Сергей</operation>
+    </cashop>
+    <cashop cashopId="20" stationId="27" opType="-1" inCount="1">
+        <operation>Зарплата петя</operation>
+    </cashop>
+    <cashop cashopId="69" stationId="27" opType="-1" inCount="1">
+        <operation>Зарплата Полторацкий Сергей</operation>
+    </cashop>
+    <cashop cashopId="75" stationId="27" opType="-1" inCount="1">
+        <operation>Зарплата Прима Игорь</operation>
+    </cashop>
+    <cashop cashopId="21" stationId="27" opType="-1" inCount="1">
+        <operation>Зарплата Саид</operation>
+    </cashop>
+    <cashop cashopId="22" stationId="27" opType="-1" inCount="1">
+        <operation>Зарплата Саша(мойщик)</operation>
+    </cashop>
+    <cashop cashopId="73" stationId="27" opType="-1" inCount="1">
+        <operation>Зарплата Сергиенко Руслан</operation>
+    </cashop>
+    <cashop cashopId="23" stationId="27" opType="-1" inCount="1">
+        <operation>Зарплата Серегей Бацура</operation>
+    </cashop>
+    <cashop cashopId="78" stationId="27" opType="-1" inCount="1">
+        <operation>Зарплата Синяченко Андрей</operation>
+    </cashop>
+    <cashop cashopId="48" stationId="27" opType="-1" inCount="1">
+        <operation>Зарплата смена 1</operation>
+    </cashop>
+    <cashop cashopId="49" stationId="27" opType="-1" inCount="1">
+        <operation>Зарплата смена 2</operation>
+    </cashop>
+    <cashop cashopId="79" stationId="27" opType="-1" inCount="1">
+        <operation>Зарплата Стрилец Андрей</operation>
+    </cashop>
+    <cashop cashopId="24" stationId="27" opType="-1" inCount="1">
+        <operation>Зарплата Таня</operation>
+    </cashop>
+    <cashop cashopId="25" stationId="27" opType="-1" inCount="1">
+        <operation>Зарплата ТИХОН</operation>
+    </cashop>
+    <cashop cashopId="70" stationId="27" opType="-1" inCount="1">
+        <operation>Зарплата Тонких Александр</operation>
+    </cashop>
+    <cashop cashopId="80" stationId="27" opType="-1" inCount="1">
+        <operation>Зарплата Чехлань Александр</operation>
+    </cashop>
+    <cashop cashopId="76" stationId="27" opType="-1" inCount="1">
+        <operation>Зарплата Чубар Евгений</operation>
+    </cashop>
+    <cashop cashopId="11" stationId="27" opType="-1" inCount="1">
+        <operation>Зарплата Юра Алексеев</operation>
+    </cashop>
+    <cashop cashopId="26" stationId="27" opType="-1" inCount="1">
+        <operation>Зарплата Юра Белоус</operation>
+    </cashop>
+    <cashop cashopId="27" stationId="27" opType="-1" inCount="1">
+        <operation>Зарплата Юра1</operation>
+    </cashop>
+    <cashop cashopId="67" stationId="27" opType="-1" inCount="1">
+        <operation>Зарплата Яицкий Сергей</operation>
+    </cashop>
+    <cashop cashopId="41" stationId="27" opType="-1" inCount="1">
+        <operation>Зарплата Яна Сусла</operation>
+    </cashop>
+    <cashop cashopId="2" stationId="0" opType="-1" inCount="0">
+        <operation>Инкассация</operation>
+    </cashop>
+    <cashop cashopId="97" stationId="27" opType="-1" inCount="1">
+        <operation>Кабанов Сергей</operation>
+    </cashop>
+    <cashop cashopId="47" stationId="27" opType="-1" inCount="1">
+        <operation>Лена Бычек</operation>
+    </cashop>
+    <cashop cashopId="45" stationId="27" opType="-1" inCount="1">
+        <operation>Максим Негро</operation>
+    </cashop>
+    <cashop cashopId="46" stationId="27" opType="-1" inCount="1">
+        <operation>Марина Колодка</operation>
+    </cashop>
+    <cashop cashopId="28" stationId="27" opType="-1" inCount="1">
+        <operation>МУСОР</operation>
+    </cashop>
+    <cashop cashopId="1" stationId="0" opType="1" inCount="0">
+        <operation>Оплата услуг</operation>
+    </cashop>
+    <cashop cashopId="3" stationId="0" opType="1" inCount="0">
+        <operation>Остаток вечерней кассы</operation>
+    </cashop>
+    <cashop cashopId="29" stationId="27" opType="-1" inCount="1">
+        <operation>Ошибка</operation>
+    </cashop>
+    <cashop cashopId="44" stationId="27" opType="-1" inCount="1">
+        <operation>Павел Пивовар</operation>
+    </cashop>
+    <cashop cashopId="30" stationId="27" opType="-1" inCount="1">
+        <operation>Премия</operation>
+    </cashop>
+    <cashop cashopId="72" stationId="27" opType="-1" inCount="1">
+        <operation>Рудюк Александр</operation>
+    </cashop>
+    <cashop cashopId="71" stationId="27" opType="-1" inCount="1">
+        <operation>Федорченко Юрий</operation>
+    </cashop>
+    <cashop cashopId="34" stationId="27" opType="-1" inCount="1">
+        <operation>Химия</operation>
+    </cashop>
+    <cashop cashopId="35" stationId="27" opType="-1" inCount="1">
+        <operation>Хоз.нужды</operation>
+    </cashop>
+    <cashop cashopId="33" stationId="27" opType="-1" inCount="1">
+        <operation>Чай</operation>
+    </cashop>
+    <cashop cashopId="36" stationId="27" opType="-1" inCount="1">
+        <operation>Электрик</operation>
+    </cashop>
+</cashops>
